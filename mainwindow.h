@@ -29,11 +29,11 @@ public:
 
 private slots:
 
-    void on_buttonCancel_2_clicked();
+    void on_buttonCancel_clicked();
 
 
 
-    void on_buttonOK_2_clicked();
+    void on_buttonInstall_clicked();
 
 
 
@@ -41,7 +41,7 @@ private slots:
 
     void on_refreshbutton_clicked();
 
-    void on_buttonAbout_2_clicked();
+    void on_buttonAbout_clicked();
 
 private:
     Ui::MainWindow *ui;

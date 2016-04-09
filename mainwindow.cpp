@@ -13,7 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    this->show();
+    start();
 }
 
 MainWindow::~MainWindow()
@@ -56,23 +57,46 @@ QStringList MainWindow::readMXlist()
 void MainWindow::displayMXlist(QStringList mxlist)
 
 {
- ui->listWidget->clear();
- QStringListIterator mxIterator(mxlist);
- while (mxIterator.hasNext()) {
-     QString listing = mxIterator.next();
-     QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
-     item->setFlags(item->flags());
-     item->setCheckState(Qt::Unchecked);
-     item->setText(listing);
- }
+    runCmd("notify-send -i application-x-deb -t 20000 'Test Repo Installer' 'Building Test Repo Package List'");
+    ui->listWidget->clear();
+    QStringListIterator mxIterator(mxlist);
+    while (mxIterator.hasNext()) {
+        QString listing = mxIterator.next();
+        QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
+        item->setFlags(item->flags());
+        item->setCheckState(Qt::Unchecked);
+        item->setText(listing);
+        QString app = listing.section(" ", 0, 0);
+        qDebug() << app;
+        QString installed = runCmd("apt-cache policy " + app + "|grep Installed:").str.section(": ", 1, 1);
+        QString candidate = listing.section(" ", 1, 1);
+        qDebug() << installed;
+        qDebug() << candidate;
+        if (installed == "(none)") {
+            item->setBackgroundColor(Qt::white);
+            item->setToolTip("Version " + candidate + " in stable repo" );
+        } else {
+            if (installed == "") {
+                item->setBackgroundColor(Qt::white);
+                item->setToolTip("Not available in stable repo" );
+            } else {
+                if (installed == candidate) {
+                    item->setBackgroundColor(Qt::green);
+                    item->setToolTip("Latest version already installed");
+                } else {
+                    item->setBackgroundColor(Qt::yellow);
+                    item->setToolTip("Version " + installed + " installed");
+                }
+            }
+        }
+    }
 }
-
-void MainWindow::on_buttonCancel_2_clicked()
+void MainWindow::on_buttonCancel_clicked()
 {
     exit(0);
 }
 
-void MainWindow::on_buttonOK_2_clicked()
+void MainWindow::on_buttonInstall_clicked()
 {
     QStringListIterator changeIterator(changeset);
     QString aptgetlist;
@@ -83,11 +107,12 @@ void MainWindow::on_buttonOK_2_clicked()
     }
     runCmd("su-to-root -X -c 'echo deb http://main.mepis-deb.org/mx/testrepo/ mx15 test>/etc/apt/sources.list.d/mxtestrepotemp.list'");
     runCmd("su-to-root -X -c 'x-terminal-emulator -e apt-get update'");
-    runCmd("su-to-root -X -c 'x-terminal-emulator -e apt-get install -s" + aptgetlist +"'");
+    runCmd("su-to-root -X -c 'x-terminal-emulator -e apt-get install " + aptgetlist +"'");
     runCmd("su-to-root -X -c 'rm -f /etc/apt/sources.list.d/mxtestrepotemp.list'");
     runCmd("su-to-root -X -c 'x-terminal-emulator -e apt-get update'");
     changeset.clear();
     qDebug() << changeset;
+    start();
 }
 void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
 {
@@ -112,6 +137,6 @@ void MainWindow::on_refreshbutton_clicked()
     start();
 }
 
-void MainWindow::on_buttonAbout_2_clicked()
+void MainWindow::on_buttonAbout_clicked()
 {
 }

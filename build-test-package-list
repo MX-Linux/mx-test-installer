@@ -17,7 +17,7 @@ arch=$(dpkg --print-architecture)
 if [ "$arch" = "i386" ]; then
 	wget http://mxrepo.com/mx/testrepo/dists/mx15/test/binary-i386/Packages.gz -O ~/.config/testrepoinstaller/Packages.gz
 else
-	wget http://mxrepo.com/mx/testrepo/dists/mx15/test/binary-amd64/Packages.gz ~/.config/testrepoinstaller/Packages.gz
+	wget http://mxrepo.com/mx/testrepo/dists/mx15/test/binary-amd64/Packages.gz -O ~/.config/testrepoinstaller/Packages.gz
 fi
 
 #unpack Packages.gz
@@ -42,7 +42,7 @@ echo $count Packages
 i="0"
 while [ "$i" -lt "$count" ]
 do
-	echo "${packagename[i]}  ${packageversion[i]} ${packagedescrip[i]}">>~/.config/testrepoinstaller/packagelist.txt
+	echo "${packagename[i]} ${packageversion[i]} ${packagedescrip[i]}">>~/.config/testrepoinstaller/packagelist.txt
 	i=$[$i+1]
 done
 
