@@ -92,7 +92,7 @@ background-color: rgb(43, 54, 64);</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../../../../../usr/share/mx-repo-manager/icons/gnome-help.png</normaloff>../../../../../../../../usr/share/mx-repo-manager/icons/gnome-help.png</iconset>
+          <normaloff>../../../usr/share/mx-test-installer/icons/gnome-help.png</normaloff>../../../usr/share/mx-test-installer/icons/gnome-help.png</iconset>
         </property>
         <property name="shortcut">
          <string>Alt+H</string>
@@ -147,7 +147,7 @@ background-color: rgb(43, 54, 64);</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../../../../../usr/share/mx-repo-manager/icons/accessories-text-editor.png</normaloff>../../../../../../../../usr/share/mx-repo-manager/icons/accessories-text-editor.png</iconset>
+          <normaloff>../../../usr/share/mx-test-installer/icons/accessories-text-editor.png</normaloff>../../../usr/share/mx-test-installer/icons/accessories-text-editor.png</iconset>
         </property>
         <property name="shortcut">
          <string>Alt+B</string>
@@ -173,7 +173,7 @@ background-color: rgb(43, 54, 64);</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../../../../../usr/share/mx-repo-manager/icons/gtk-cancel.png</normaloff>../../../../../../../../usr/share/mx-repo-manager/icons/gtk-cancel.png</iconset>
+          <normaloff>../../../usr/share/mx-test-installer/icons/gtk-cancel.png</normaloff>../../../usr/share/mx-test-installer/icons/gtk-cancel.png</iconset>
         </property>
         <property name="shortcut">
          <string>Alt+N</string>
@@ -198,7 +198,7 @@ background-color: rgb(43, 54, 64);</string>
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../../../../../../../../usr/share/mx-repo-manager/icons/mxfcelogo.png</pixmap>
+         <pixmap>../../../usr/share/mx-test-installer/icons/mxfcelogo.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -218,7 +218,7 @@ background-color: rgb(43, 54, 64);</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../../../../usr/share/mx-repo-manager/icons/dialog-ok.png</normaloff>../../../../../../../usr/share/mx-repo-manager/icons/dialog-ok.png</iconset>
+          <normaloff>../../../usr/share/mx-test-installer/icons/dialog-ok.png</normaloff>../../../usr/share/mx-test-installer/icons/dialog-ok.png</iconset>
         </property>
        </widget>
       </item>

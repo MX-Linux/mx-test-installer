@@ -1,0 +1,14 @@
+Source: mx-test-installer
+Section: admin
+Priority: optional
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Build-Depends: qt5-qmake,
+	debhelper (>=7.0.50~)
+Standards-Version: 3.9.5
+Vcs-Git: https://github.com/dolphinoracle/testrepoinstaller
+
+Package: mx-test-installer
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, mx-viewer
+Description: mx-test-installer
+ App for installing directly from MX Test Repo

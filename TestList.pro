@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = TestList
+TARGET = mx-test-installer
 TEMPLATE = app
 
 
@@ -18,3 +18,13 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+TRANSLATIONS += translations/mx-test-installer_ca.ts \
+                translations/mx-test-installer_de.ts \
+                translations/mx-test-installer_el.ts \
+                translations/mx-test-installer_es.ts \
+                translations/mx-test-installer_fr.ts \
+                translations/mx-test-installer_it.ts \
+                translations/mx-test-installer_ja.ts \
+                translations/mx-test-installer_nl.ts \
+                translations/mx-test-installer_sv.ts
