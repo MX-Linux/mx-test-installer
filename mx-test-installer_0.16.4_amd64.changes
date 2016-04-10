@@ -18,26 +18,26 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 9cbe1f83ef81b94ebecbeea3d5400612609275e8 1186 mx-test-installer_0.16.4.dsc
- 495114cb17c09fc1f6f9e500a77dfbbdb2161491 46964 mx-test-installer_0.16.4.tar.xz
- d78c019d4924c54d3317fff93d104e23bd558608 29778 mx-test-installer_0.16.4_amd64.deb
+ 2d03bd8426a956e448564871296100bb4984cd03 1186 mx-test-installer_0.16.4.dsc
+ 7b8ecc49542a5d7a3715df79bb48629269044b3b 59564 mx-test-installer_0.16.4.tar.xz
+ e516a5746608a7c3ea63e6eb1119831a90880d0d 29846 mx-test-installer_0.16.4_amd64.deb
 Checksums-Sha256:
- 5b39c6144aa95ed60ec77b54022d6cb1b51fcfeac4d31fadfdba54d35a547d7d 1186 mx-test-installer_0.16.4.dsc
- 558ff8d18d3491935235814b4f8b9f716147ab4912f49921ccfe81c7d270b56c 46964 mx-test-installer_0.16.4.tar.xz
- 36fa58554ceb45a5cd55ed5fe8462a6ee64f2983764e4eac5c8141257427f102 29778 mx-test-installer_0.16.4_amd64.deb
+ a5bc1444186ca09ed362e44b1f5d516aa7d2ac3a8e46bf096417858d009e34b9 1186 mx-test-installer_0.16.4.dsc
+ 2216d0026bcf816afa664e8b3b940f3295e42b1cd4dd0d71f677b5a6cc852f5c 59564 mx-test-installer_0.16.4.tar.xz
+ 0534fafc12772d28069a32eee9876eb2df00cb1bc229e0617f3cce0e56000763 29846 mx-test-installer_0.16.4_amd64.deb
 Files:
- 3d03d8841e333d106e0f91b232d40d7b 1186 admin optional mx-test-installer_0.16.4.dsc
- c11898b92510445e36060186bc97ef8a 46964 admin optional mx-test-installer_0.16.4.tar.xz
- c08339e7768ca8836d71f45338cd12e6 29778 admin optional mx-test-installer_0.16.4_amd64.deb
+ b5d1d1ff27f9a0a502da0b788107f4b4 1186 admin optional mx-test-installer_0.16.4.dsc
+ 382b591b5de8912946c7676ce0118456 59564 admin optional mx-test-installer_0.16.4.tar.xz
+ 0a99bb44cfe146fbdb6250a9fc65b79e 29846 admin optional mx-test-installer_0.16.4_amd64.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJXCnRPAAoJEHCTjHgGee6Ys1AH/RuBTScLg+1O2LzsNoRMcyaD
-1dmT9Nu/UbR4pIaEvm/pwLwYcCItAoO7F49tKyZbNJ3taiKsnaKNze77yiddEiOh
-FM3ioNMQuBKWMkGQK1N/77uEQdi8CpSm4HllbmJcauRnII4pQHjJnuRVEEHVwSTF
-HY6zgz1meeflN6wifiy2NgEOQq74QPNpaB90sob4riS8GcGqNvfI77jTW2uFTb/7
-VDIuX2LyTQ+W8urtF2raxSikrK2WOkS85I6a2m9RmSGgot/7MvcVOHVoZq7wWshU
-pqpTEU+xy5iO822LcRxdWFlPFVLfOX+ChlFIt/I9PqRJFU47tcE0hIG9lRbgnHE=
-=xbiX
+iQEcBAEBAgAGBQJXCnV/AAoJEHCTjHgGee6Y/KwH/0zbW6cKeHcm7lzRJ8uUq4vg
+1cb8Q7eTyIA2+OLxtEU1wl4Pgb+Y9p60o1M8oWZc7/R3y/hFXO+g4amQl9jLJ3yR
+qPBbpmjEzucXNUWyhttgdkym+3W2eEB0x0NR3B0mmP5Bfm4mHyl9wjrzoewVmYKn
+iXONwC5mcMXnfEm8u9seJXCZeBHD+aAFU3JiOtYA3I90brM5eBkbLr+49iivOvNE
+RUAkaUmzM73mj4Jp03qf55nC9PqRt1hdARSMpduM86SyMjET4thbJbo3HD33hvaT
+j6/9xVk9HFeDMwzLWVAorI/XXBHd+sniM7RyROlXrGhluuCdQ8hrmkziXVWC3JY=
+=Vlu3
 -----END PGP SIGNATURE-----
