@@ -15,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->show();
+    system("notify-send -i application-x-deb -t 1000 'Test Repo Installer' 'Building Test Repo Package List'");
+    runCmd("build-test-package-list.sh");
     start();
 }
 
@@ -36,11 +38,10 @@ Output MainWindow::runCmd(QString cmd)
     return out;
 }
 
-// poplulate list
+// populate list
 void MainWindow::start()
 {
     displayMXlist(readMXlist());
-
 }
 
 // List available apps
@@ -55,7 +56,6 @@ QStringList MainWindow::readMXlist()
 
 // Dislpay available apps
 void MainWindow::displayMXlist(QStringList mxlist)
-
 {
     QHash<QString, QString> hashApp; // hash that contains (app_name, app_info) for the mxlist
     QString app_name;
@@ -67,7 +67,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
     QStringList app_info_list;
     QListWidgetItem *widget_item;
 
-    system("notify-send -i application-x-deb -t 20000 'Test Repo Installer' 'Building Test Repo Package List'");
+    system("notify-send -i application-x-deb -t 4000 'Test Repo Installer' 'List Packages'");
     ui->listWidget->clear();
 
     // create a list of apps, create a hash with app_name, app_info
@@ -83,7 +83,6 @@ void MainWindow::displayMXlist(QStringList mxlist)
     foreach(item, app_info_list) {
         app_name = item.section(":", 0, 0).trimmed();
         app_info = hashApp[app_name];
-        candidate = app_info.section(" ", 0, 0); // candidate version
         installed = item.section("\n  ", 1, 1).trimmed().section(": ", 1, 1); // Installed version
         widget_item = new QListWidgetItem(ui->listWidget);
         widget_item->setFlags(widget_item->flags());
@@ -92,18 +91,17 @@ void MainWindow::displayMXlist(QStringList mxlist)
         if (installed == "(none)") {
             widget_item->setBackgroundColor(Qt::white);
             widget_item->setToolTip("Version " + candidate + " in stable repo" );
+        } else if (installed == "") {
+            widget_item->setBackgroundColor(Qt::white);
+            widget_item->setToolTip("Not available in stable repo" );
         } else {
-            if (installed == "") {
-                widget_item->setBackgroundColor(Qt::white);
-                widget_item->setToolTip("Not available in stable repo" );
+            candidate = app_info.section(" ", 0, 0); // candidate version
+            if (installed == candidate) {
+                widget_item->setBackgroundColor(Qt::green);
+                widget_item->setToolTip("Latest version already installed");
             } else {
-                if (installed == candidate) {
-                    widget_item->setBackgroundColor(Qt::green);
-                    widget_item->setToolTip("Latest version already installed");
-                } else {
-                    widget_item->setBackgroundColor(Qt::yellow);
-                    widget_item->setToolTip("Version " + installed + " installed");
-                }
+                widget_item->setBackgroundColor(Qt::yellow);
+                widget_item->setToolTip("Version " + installed + " installed");
             }
         }
     }
@@ -114,6 +112,7 @@ void MainWindow::on_buttonCancel_clicked()
 {
     exit(0);
 }
+
 
 void MainWindow::on_buttonInstall_clicked()
 {
@@ -133,6 +132,8 @@ void MainWindow::on_buttonInstall_clicked()
     qDebug() << changeset;
     start();
 }
+
+
 void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
 {
     QString newapp = QString(item->text());
@@ -149,12 +150,15 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
     }
 }
 
+
 void MainWindow::on_refreshbutton_clicked()
 {
     ui->listWidget->clear();
-    runCmd("build-test-package-list");
+    system("notify-send -i application-x-deb -t 1000 'Test Repo Installer' 'Building Test Repo Package List'");
+    runCmd("build-test-package-list.sh");
     start();
 }
+
 
 void MainWindow::on_buttonAbout_clicked()
 {

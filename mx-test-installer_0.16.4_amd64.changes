@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Sun, 10 Apr 2016 10:59:55 -0400
+Source: mx-test-installer
+Binary: mx-test-installer
+Architecture: source amd64
+Version: 0.16.4
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-test-installer - mx-test-installer
+Changes:
+ mx-test-installer (0.16.4) mx; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 2d03bd8426a956e448564871296100bb4984cd03 1186 mx-test-installer_0.16.4.dsc
+ 7b8ecc49542a5d7a3715df79bb48629269044b3b 59564 mx-test-installer_0.16.4.tar.xz
+ e516a5746608a7c3ea63e6eb1119831a90880d0d 29846 mx-test-installer_0.16.4_amd64.deb
+Checksums-Sha256:
+ a5bc1444186ca09ed362e44b1f5d516aa7d2ac3a8e46bf096417858d009e34b9 1186 mx-test-installer_0.16.4.dsc
+ 2216d0026bcf816afa664e8b3b940f3295e42b1cd4dd0d71f677b5a6cc852f5c 59564 mx-test-installer_0.16.4.tar.xz
+ 0534fafc12772d28069a32eee9876eb2df00cb1bc229e0617f3cce0e56000763 29846 mx-test-installer_0.16.4_amd64.deb
+Files:
+ b5d1d1ff27f9a0a502da0b788107f4b4 1186 admin optional mx-test-installer_0.16.4.dsc
+ 382b591b5de8912946c7676ce0118456 59564 admin optional mx-test-installer_0.16.4.tar.xz
+ 0a99bb44cfe146fbdb6250a9fc65b79e 29846 admin optional mx-test-installer_0.16.4_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJXCnV/AAoJEHCTjHgGee6Y/KwH/0zbW6cKeHcm7lzRJ8uUq4vg
+1cb8Q7eTyIA2+OLxtEU1wl4Pgb+Y9p60o1M8oWZc7/R3y/hFXO+g4amQl9jLJ3yR
+qPBbpmjEzucXNUWyhttgdkym+3W2eEB0x0NR3B0mmP5Bfm4mHyl9wjrzoewVmYKn
+iXONwC5mcMXnfEm8u9seJXCZeBHD+aAFU3JiOtYA3I90brM5eBkbLr+49iivOvNE
+RUAkaUmzM73mj4Jp03qf55nC9PqRt1hdARSMpduM86SyMjET4thbJbo3HD33hvaT
+j6/9xVk9HFeDMwzLWVAorI/XXBHd+sniM7RyROlXrGhluuCdQ8hrmkziXVWC3JY=
+=Vlu3
+-----END PGP SIGNATURE-----
