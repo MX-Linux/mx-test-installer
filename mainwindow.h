@@ -21,27 +21,20 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    QStringList readMXlist();
-    void displayMXlist(QStringList mxlist);
-    Output runCmd(QString cmd);
-    void start();
+
     QStringList changeset;
+    QStringList readMXlist();
+
+    void displayMXlist(QStringList mxlist);
+    void start();
+    Output runCmd(QString cmd);
 
 private slots:
-
     void on_buttonCancel_clicked();
-
-
-
     void on_buttonInstall_clicked();
-
-
-
-    void on_listWidget_itemClicked(QListWidgetItem *item);
-
     void on_refreshbutton_clicked();
-
     void on_buttonAbout_clicked();
+    void on_listWidget_itemClicked(QListWidgetItem *item);
 
 private:
     Ui::MainWindow *ui;

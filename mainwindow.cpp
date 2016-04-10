@@ -4,9 +4,10 @@
 #include <QProcess>
 #include <QRadioButton>
 #include <QDir>
-#include <QDebug>
-#include <QForeachContainer>
 #include <QMessageBox>
+#include <QHash>
+
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -21,6 +22,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 // util function for getting bash command output and error code
 Output MainWindow::runCmd(QString cmd)
 {
@@ -44,53 +46,70 @@ void MainWindow::start()
 // List available apps
 QStringList MainWindow::readMXlist()
 {
-    QString home_path = QDir::homePath();
     QString file_content;
     QStringList mxlist;
-    file_content = runCmd("cat " + home_path + "/.config/testrepoinstaller/packagelist.txt").str;
+    file_content = runCmd("cat " + QDir::homePath() + "/.config/testrepoinstaller/packagelist.txt").str;
     mxlist = file_content.split("\n");
     return mxlist;
-
 }
 
 // Dislpay available apps
 void MainWindow::displayMXlist(QStringList mxlist)
 
 {
-    runCmd("notify-send -i application-x-deb -t 20000 'Test Repo Installer' 'Building Test Repo Package List'");
+    QHash<QString, QString> hashApp; // hash that contains (app_name, app_info) for the mxlist
+    QString app_name;
+    QString app_info;
+    QString apps;
+    QString item;
+    QString installed;
+    QString candidate;
+    QStringList app_info_list;
+    QListWidgetItem *widget_item;
+
+    system("notify-send -i application-x-deb -t 20000 'Test Repo Installer' 'Building Test Repo Package List'");
     ui->listWidget->clear();
-    QStringListIterator mxIterator(mxlist);
-    while (mxIterator.hasNext()) {
-        QString listing = mxIterator.next();
-        QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
-        item->setFlags(item->flags());
-        item->setCheckState(Qt::Unchecked);
-        item->setText(listing);
-        QString app = listing.section(" ", 0, 0);
-        qDebug() << app;
-        QString installed = runCmd("apt-cache policy " + app + "|grep Installed:").str.section(": ", 1, 1);
-        QString candidate = listing.section(" ", 1, 1);
-        qDebug() << installed;
-        qDebug() << candidate;
+
+    // create a list of apps, create a hash with app_name, app_info
+    foreach(item, mxlist) {
+        app_name = item.section(" ", 0, 0);
+        app_info = item.section(" ", 1, -1);
+        hashApp.insert(app_name, app_info);
+        apps += app_name + " "; // all the apps
+    }
+    QString info_installed = runCmd("apt-cache policy " + apps + "|grep Installed -B1").str; // intalled app info
+    app_info_list = info_installed.split("--"); // list of installed apps
+
+    foreach(item, app_info_list) {
+        app_name = item.section(":", 0, 0).trimmed();
+        app_info = hashApp[app_name];
+        candidate = app_info.section(" ", 0, 0); // candidate version
+        installed = item.section("\n  ", 1, 1).trimmed().section(": ", 1, 1); // Installed version
+        widget_item = new QListWidgetItem(ui->listWidget);
+        widget_item->setFlags(widget_item->flags());
+        widget_item->setCheckState(Qt::Unchecked);
+        widget_item->setText(app_name +  " " + app_info);
         if (installed == "(none)") {
-            item->setBackgroundColor(Qt::white);
-            item->setToolTip("Version " + candidate + " in stable repo" );
+            widget_item->setBackgroundColor(Qt::white);
+            widget_item->setToolTip("Version " + candidate + " in stable repo" );
         } else {
             if (installed == "") {
-                item->setBackgroundColor(Qt::white);
-                item->setToolTip("Not available in stable repo" );
+                widget_item->setBackgroundColor(Qt::white);
+                widget_item->setToolTip("Not available in stable repo" );
             } else {
                 if (installed == candidate) {
-                    item->setBackgroundColor(Qt::green);
-                    item->setToolTip("Latest version already installed");
+                    widget_item->setBackgroundColor(Qt::green);
+                    widget_item->setToolTip("Latest version already installed");
                 } else {
-                    item->setBackgroundColor(Qt::yellow);
-                    item->setToolTip("Version " + installed + " installed");
+                    widget_item->setBackgroundColor(Qt::yellow);
+                    widget_item->setToolTip("Version " + installed + " installed");
                 }
             }
         }
     }
 }
+
+
 void MainWindow::on_buttonCancel_clicked()
 {
     exit(0);
