@@ -15,7 +15,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->show();
-    system("notify-send -i application-x-deb -t 1000 'Test Repo Installer' 'Building Test Repo Package List'");
     runCmd("build-test-package-list.sh");
     start();
 }
@@ -67,7 +66,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
     QStringList app_info_list;
     QListWidgetItem *widget_item;
 
-    system("notify-send -i application-x-deb -t 4000 'Test Repo Installer' 'List Packages'");
+    system("notify-send -i application-x-deb 'Test Repo Installer' 'List Packages'");
     ui->listWidget->clear();
 
     // create a list of apps, create a hash with app_name, app_info
@@ -148,15 +147,6 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
         changeset.removeOne(newapp2);
         qDebug() << changeset;
     }
-}
-
-
-void MainWindow::on_refreshbutton_clicked()
-{
-    ui->listWidget->clear();
-    system("notify-send -i application-x-deb -t 1000 'Test Repo Installer' 'Building Test Repo Package List'");
-    runCmd("build-test-package-list.sh");
-    start();
 }
 
 

@@ -45,14 +45,7 @@
 background-color: rgb(43, 54, 64);</string>
       </property>
       <property name="text">
-       <string>Stable Version Installed</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="refreshbutton">
-      <property name="text">
-       <string>Refresh Test Repo Sources</string>
+       <string>Latest Version Installed</string>
       </property>
      </widget>
     </item>
@@ -231,7 +224,7 @@ background-color: rgb(43, 54, 64);</string>
 background-color: rgb(43, 54, 64);</string>
       </property>
       <property name="text">
-       <string>Test Version Installed</string>
+       <string>Earlier Version Installed</string>
       </property>
      </widget>
     </item>

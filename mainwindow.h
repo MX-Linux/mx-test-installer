@@ -32,7 +32,6 @@ public:
 private slots:
     void on_buttonCancel_clicked();
     void on_buttonInstall_clicked();
-    void on_refreshbutton_clicked();
     void on_buttonAbout_clicked();
     void on_listWidget_itemClicked(QListWidgetItem *item);
 
