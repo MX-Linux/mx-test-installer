@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 Format: 1.8
 Date: Sun, 10 Apr 2016 10:59:55 -0400
 Source: mx-test-installer
@@ -15,14 +18,26 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- f61875fd63147204224d2c50a0b7594f9c2e0598 668 mx-test-installer_0.16.4.dsc
- 8f57b2f6b6f39b98e5263bfe69dafe465795b687 105408 mx-test-installer_0.16.4.tar.xz
- 585d56cdf1c86b3be7c1b4baab2c8590d1b40f87 29348 mx-test-installer_0.16.4_amd64.deb
+ cfef19c8ec51e0f919f9eec0e6cca3138b38c794 1189 mx-test-installer_0.16.4.dsc
+ df7b909fd9c4ae35af44022dbec46c5db075fd5c 158168 mx-test-installer_0.16.4.tar.xz
+ 943c0b50f66ba90ec105110119b6bd71065fcfaf 32502 mx-test-installer_0.16.4_amd64.deb
 Checksums-Sha256:
- 2c4303470bd9b96f196a4e75a66a751784acc35efb1b726592d378697c7711b9 668 mx-test-installer_0.16.4.dsc
- edc6a8f5d70de2f58a878cab3c9ec823ba702e049df175229f4e78653f333a4a 105408 mx-test-installer_0.16.4.tar.xz
- 536c45caf96045b8a6760596561c2f6f22e0e067f5e4cb1e883b64d1106279d9 29348 mx-test-installer_0.16.4_amd64.deb
+ 935c914ff337e39e83b930d2063c627095ec4cdd89ed9efebb52c09c158e6149 1189 mx-test-installer_0.16.4.dsc
+ 83dfb03a9a443781a2894c46c249758da748cf1a505ef6e5b92810df2b2dacf0 158168 mx-test-installer_0.16.4.tar.xz
+ f896a02c0fbfce9177ade2eee93f3f3d58f80c2fc58781a81135d311308a97dc 32502 mx-test-installer_0.16.4_amd64.deb
 Files:
- 065ca7fc3750ec477248acc4d907a38f 668 admin optional mx-test-installer_0.16.4.dsc
- 0635cc3efe49beff0485a566efee0c0b 105408 admin optional mx-test-installer_0.16.4.tar.xz
- 410ca2399580b4080259d48ec2173c6f 29348 admin optional mx-test-installer_0.16.4_amd64.deb
+ 072b17dd4d98c935b71c06d9d3988571 1189 admin optional mx-test-installer_0.16.4.dsc
+ c83d437ebcbe0f7f11f5132c68c0f802 158168 admin optional mx-test-installer_0.16.4.tar.xz
+ 966a193c7694e5d7e44e61f8f5950cff 32502 admin optional mx-test-installer_0.16.4_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJXDAI3AAoJEHCTjHgGee6YlhQIAJThknka5JASHXEZZCpT0Bwf
+pSouLcQSmtfGrExHZEFCTkl2vhy7O7ZF0wDUO2WUGESqQ7EOwdS7jE6bB2qv6gg4
+BMnkO+Ub6KAjN+CS1+WHefYCTw2Nr9p2N+ZwwkpaKsAIM0IDVIs4YU2usF5XQTUe
+9XnjBLUBedNMqOX0NXpo9p5TwJK4ja4JGYf+SAlds0NNLH6binthxlCHx+ECx2Qj
+tw+Q4Pkx6yOz0NfX8Jsb+VXR9jvs8syHZdxhfUxiR71kdC0cucbIi3zNZlQr919x
+rf0Mib2+hNxkmwrzoBM9drGKMAUrdZ+7nMPUxDN81q3kvcdZSnu6Dlw/bAHQfb8=
+=zGt5
+-----END PGP SIGNATURE-----
