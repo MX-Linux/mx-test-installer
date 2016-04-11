@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->show();
+    version = getVersion("mx-system-sounds");
     runCmd("build-test-package-list.sh");
     start();
 }
@@ -35,6 +36,13 @@ Output MainWindow::runCmd(QString cmd)
     Output out = {proc->exitCode(), proc->readAll().trimmed()};
     delete proc;
     return out;
+}
+
+// Get version of the program
+QString MainWindow::getVersion(QString name)
+{
+    QString cmdstr = QString("dpkg -l %1 | awk 'NR==6 {print $3}'").arg(name);
+    return runCmd(cmdstr).str;
 }
 
 // populate list
@@ -152,4 +160,17 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
 
 void MainWindow::on_buttonAbout_clicked()
 {
+    this->hide();
+    QMessageBox msgBox(QMessageBox::NoIcon,
+                       tr("About MX Test Installer"), "<p align=\"center\"><b><h2>" +
+                       tr("MX Test Installer") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
+                       tr("App for installing directly from MX Test Repo") +
+                       "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
+                       tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
+    msgBox.addButton(tr("Cancel"), QMessageBox::AcceptRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
+    msgBox.addButton(tr("License"), QMessageBox::RejectRole);
+    if (msgBox.exec() == QMessageBox::RejectRole) {
+        system("mx-viewer file:///usr/share/doc/mx-test-installer/license.html '" + tr("MX Test Installer").toUtf8() + " " + tr("License").toUtf8() + "'");
+    }
+    this->show();
 }

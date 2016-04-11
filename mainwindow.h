@@ -22,11 +22,13 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    QStringList changeset;
+    QString version;
+    QStringList changeset;    
     QStringList readMXlist();
 
     void displayMXlist(QStringList mxlist);
     void start();
+    QString getVersion(QString name);
     Output runCmd(QString cmd);
 
 private slots:
