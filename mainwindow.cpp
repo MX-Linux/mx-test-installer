@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->show();
+    version = getVersion("mx-system-sounds");
     runCmd("build-test-package-list.sh");
     start();
 }
@@ -35,6 +36,13 @@ Output MainWindow::runCmd(QString cmd)
     Output out = {proc->exitCode(), proc->readAll().trimmed()};
     delete proc;
     return out;
+}
+
+// Get version of the program
+QString MainWindow::getVersion(QString name)
+{
+    QString cmdstr = QString("dpkg -l %1 | awk 'NR==6 {print $3}'").arg(name);
+    return runCmd(cmdstr).str;
 }
 
 // populate list
