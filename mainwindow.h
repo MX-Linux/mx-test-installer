@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <QListWidgetItem>
+#include <QTimer>
+#include <QProgressDialog>
+#include <QProgressBar>
 
 namespace Ui {
 class MainWindow;
@@ -27,17 +30,23 @@ public:
     QStringList readMXlist();
 
     void displayMXlist(QStringList mxlist);
-    void start();
+    void start();    
+    void startProgressBar();
+    void stopProgressBar();
     QString getVersion(QString name);
     Output runCmd(QString cmd);
 
 private slots:
+    void procTime();
     void on_buttonCancel_clicked();
     void on_buttonInstall_clicked();
     void on_buttonAbout_clicked();
     void on_listWidget_itemClicked(QListWidgetItem *item);
 
-private:
+
+private:        
+    QProgressDialog *progress;
+    QTimer *timer;
     Ui::MainWindow *ui;
 };
 

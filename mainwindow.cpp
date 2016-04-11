@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->show();
     version = getVersion("mx-system-sounds");
+    qApp->processEvents();
     runCmd("build-test-package-list.sh");
     start();
 }
@@ -30,9 +31,10 @@ Output MainWindow::runCmd(QString cmd)
 {
     QProcess *proc = new QProcess();
     QEventLoop loop;
+    connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
     proc->setReadChannelMode(QProcess::MergedChannels);
-    proc->start("/bin/bash", QStringList() << "-c" << cmd);
-    proc->waitForFinished();
+    proc->start("/bin/bash", QStringList() << "-c" << cmd);    
+    loop.exec();
     Output out = {proc->exitCode(), proc->readAll().trimmed()};
     delete proc;
     return out;
@@ -74,19 +76,19 @@ void MainWindow::displayMXlist(QStringList mxlist)
     QStringList app_info_list;
     QListWidgetItem *widget_item;
 
-    system("notify-send -i application-x-deb 'Test Repo Installer' 'List Packages'");
+    //system("notify-send -i application-x-deb 'Test Repo Installer' 'List Packages'");
+    startProgressBar();
     ui->listWidget->clear();
 
     // create a list of apps, create a hash with app_name, app_info
-    foreach(item, mxlist) {
+    foreach(item, mxlist) {        
         app_name = item.section(" ", 0, 0);
         app_info = item.section(" ", 1, -1);
         hashApp.insert(app_name, app_info);
         apps += app_name + " "; // all the apps
-    }
+    } 
     QString info_installed = runCmd("apt-cache policy " + apps + "|grep Installed -B1").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
-
     foreach(item, app_info_list) {
         app_name = item.section(":", 0, 0).trimmed();
         app_info = hashApp[app_name];
@@ -111,7 +113,38 @@ void MainWindow::displayMXlist(QStringList mxlist)
                 widget_item->setToolTip("Version " + installed + " installed");
             }
         }
-    }
+    }   
+    stopProgressBar();
+}
+
+void MainWindow::startProgressBar()
+{
+    progress = new QProgressDialog(this);
+    QProgressBar *bar = new QProgressBar(progress);
+    progress->setWindowModality(Qt::WindowModal);
+    progress->setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint |Qt::WindowSystemMenuHint | Qt::WindowStaysOnTopHint);
+    progress->setCancelButton(0);
+    progress->setLabelText(tr("Please wait till the database is loaded."));
+    progress->setAutoClose(false);
+    progress->show();
+    progress->setBar(bar);
+    bar->setTextVisible(false);
+    qApp->processEvents();
+    timer = new QTimer(this);
+    timer->start(20);
+    connect(timer, SIGNAL(timeout()),SLOT(procTime()));
+}
+
+void MainWindow::stopProgressBar()
+{
+    timer->stop();
+    disconnect(timer, SIGNAL(timeout()), 0, 0);
+    progress->close();
+}
+
+void MainWindow::procTime()
+{
+    progress->setValue(progress->value() + 1);
 }
 
 
