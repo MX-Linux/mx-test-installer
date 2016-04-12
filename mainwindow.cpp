@@ -95,6 +95,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
 {
     QHash<QString, QString> hashApp; // hash that contains (app_name, app_info) for the mxlist
     QHash<QString, VersionNumber> hashInstalled; // hash that contains (app_name, VersionNumber) returned by apt-cache policy
+ //   QHash<QString, VersionNumber> hashCandidate; //hash that contains (app_name, Candidate Version) returned by apt-cache policy
     QString app_name;
     QString app_info;
     QString apps;
@@ -117,27 +118,31 @@ void MainWindow::displayMXlist(QStringList mxlist)
         hashApp.insert(app_name, app_info);
         apps += app_name + " "; // all the apps
     }
-    QString info_installed = runCmd("apt-cache policy " + apps + "|grep Installed -B1").str; // intalled app info
+    QString info_installed = runCmd("apt-cache policy " + apps + "|grep Candidate -B2").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
     // create a hash of name and installed version
     foreach(item, app_info_list) {
         app_name = item.section(":", 0, 0).trimmed();
         installed = item.section("\n  ", 1, 1).trimmed().section(": ", 1, 1); // Installed version
+    //    candidate = item.section("\n  ", 2, 2).trimmed().section(": ", 1, 1); // Candidate version
         hashInstalled.insert(app_name, installed);
+     //   hashCandidate.insert(app_name, candidate);
     }
     // process the entire list of apps
     foreach(item, mxlist) {
         app_name = item.section(" ", 0, 0);
         app_info = hashApp[app_name];
-        app_ver = app_info.section(" ", 0, 0);
+        app_ver = app_info.section("  ", 0, 0).trimmed();
         app_desc = app_info.section("  ", 1, -1);
         installed = hashInstalled[app_name];
+    //    candidate = hashCandidate[app_name];
         widget_item = new QTreeWidgetItem(ui->treeWidget);
         widget_item->setFlags(widget_item->flags());
         widget_item->setCheckState(0, Qt::Unchecked);
         widget_item->setText(1, app_name);
         widget_item->setText(2, app_ver);
         widget_item->setText(3, app_desc);
+        candidate = QString(app_ver);
         if (installed.toString() == "(none)") {
             for (int i = 0; i < 4; ++i) {
                 widget_item->setBackground(i, Qt::white);
@@ -149,7 +154,6 @@ void MainWindow::displayMXlist(QStringList mxlist)
                 widget_item->setToolTip(i, "Not available in stable repo" );
             }
         } else {
-            candidate = app_info.section(" ", 0, 0); // candidate version
             if (installed >= candidate) {
                 for (int i = 0; i < 4; ++i) {
                     widget_item->setBackground(i, Qt::green);
