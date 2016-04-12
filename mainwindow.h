@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QListWidgetItem>
+#include <QTreeWidgetItem>
 #include <QTimer>
 #include <QProgressDialog>
 #include <QProgressBar>
@@ -26,11 +26,11 @@ public:
     ~MainWindow();
 
     QString version;
-    QStringList changeset;    
+    QStringList changeset;
     QStringList readMXlist();
 
     void displayMXlist(QStringList mxlist);
-    void start();    
+    void start();
     void startProgressBar();
     void stopProgressBar();
     QString getVersion(QString name);
@@ -41,10 +41,10 @@ private slots:
     void on_buttonCancel_clicked();
     void on_buttonInstall_clicked();
     void on_buttonAbout_clicked();
-    void on_listWidget_itemClicked(QListWidgetItem *item);
+    void on_treeWidget_itemClicked(QTreeWidgetItem *item);
 
 
-private:        
+private:
     QProgressDialog *progress;
     QTimer *timer;
     Ui::MainWindow *ui;
