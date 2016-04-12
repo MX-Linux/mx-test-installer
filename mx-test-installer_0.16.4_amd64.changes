@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 Format: 1.8
 Date: Sun, 10 Apr 2016 10:59:55 -0400
 Source: mx-test-installer
@@ -15,14 +18,26 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- dbeb2101dc09cd8c991e54212fcae4cb40f05971 668 mx-test-installer_0.16.4.dsc
- f8e4332ef5fc29f580673b7bbccbafd62aef3493 277544 mx-test-installer_0.16.4.tar.xz
- c3bf270bd39eadfe2cb83120a9691b26760cb473 37022 mx-test-installer_0.16.4_amd64.deb
+ 6eb33e63a0366e775746b70e38a54b30c7633397 1189 mx-test-installer_0.16.4.dsc
+ 2b756f70d2dff94ec764daa31b51ccbb051fc2ec 295708 mx-test-installer_0.16.4.tar.xz
+ ee080e7f4ecd8695877caa5f7fe00661b147a763 37438 mx-test-installer_0.16.4_amd64.deb
 Checksums-Sha256:
- af252583e885a9f10e86aa9e9688f073e67de9386f42649b70cc260447691a58 668 mx-test-installer_0.16.4.dsc
- ff0fabc3bec505cea3d308b6499aa3560d1bc80850788106101afb469cb8d1d5 277544 mx-test-installer_0.16.4.tar.xz
- 8e94a981fc1cee99c9fdc282ce44fefcb5c843294328d45e97551e1c5f08aacd 37022 mx-test-installer_0.16.4_amd64.deb
+ b07768f945d61d42e2ba713172694bb4180ce99ffb810511aef664075ae5fd1f 1189 mx-test-installer_0.16.4.dsc
+ 83c8555c584c68d1c56c8835b6eb4c89318bbc97e6855a342490c7be980590e8 295708 mx-test-installer_0.16.4.tar.xz
+ c5af22a642035adb2fa366790ec16d9018da41f0bce30d59e586d300dc82f8e8 37438 mx-test-installer_0.16.4_amd64.deb
 Files:
- 0f00e37cd55149f7a51ac4e71fb0dbde 668 admin optional mx-test-installer_0.16.4.dsc
- 7b581031f85686c27aceb5ccf52826eb 277544 admin optional mx-test-installer_0.16.4.tar.xz
- 5a92a8c0ae73a0927b0335d5a75aa8aa 37022 admin optional mx-test-installer_0.16.4_amd64.deb
+ 109cdafa674dbf2b1a2327497563b023 1189 admin optional mx-test-installer_0.16.4.dsc
+ fee55ca7479036b0a7ed06d257fc3140 295708 admin optional mx-test-installer_0.16.4.tar.xz
+ e710d6abc2d8f7873963d0db8b11974a 37438 admin optional mx-test-installer_0.16.4_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJXDHFLAAoJEHCTjHgGee6YbJoIAKLC5u7uI387YqqM+Q7qRnFO
+uhhzh0L8khtBud4wfU4ebyKKQXC4LuLCSiRSctDlPwzjk7kSZA4LCdj4t5UIdxiS
+tX947h9dLaUm9AQz5wOG+XieFs6uHaLXKSBZ8MAPcNq5bydL7DsHWQ9pzbC3DLi1
+QVCLJQLWanaXN7lfJgA9Dv0K2XvNTIiWAqYGGRePzQL8+00gOvGZZTYFBQDMjDkr
+VRnfd8ToT9eqdF95ulVmsh9bLBIaxMMiUtR1Adxw870RUjfN/Ng9eIJ7Ay4lRIum
+z1Xeqi1gGmT3/ctO66t0lfW/EcLXQtNABtk8zv/eZmrBltG6zwppR4gtTIyia1I=
+=LRGE
+-----END PGP SIGNATURE-----
