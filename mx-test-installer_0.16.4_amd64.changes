@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 Format: 1.8
 Date: Sun, 10 Apr 2016 10:59:55 -0400
 Source: mx-test-installer
@@ -18,26 +15,14 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 1f08742622a235c25e5069b15e70b35fc786c46f 1189 mx-test-installer_0.16.4.dsc
- 015de72d874e29a3235d83b408ef41923f227b12 197452 mx-test-installer_0.16.4.tar.xz
- 077f8f0e8ec30bfa28e1d7952689c85db992a12d 32894 mx-test-installer_0.16.4_amd64.deb
+ dbeb2101dc09cd8c991e54212fcae4cb40f05971 668 mx-test-installer_0.16.4.dsc
+ f8e4332ef5fc29f580673b7bbccbafd62aef3493 277544 mx-test-installer_0.16.4.tar.xz
+ c3bf270bd39eadfe2cb83120a9691b26760cb473 37022 mx-test-installer_0.16.4_amd64.deb
 Checksums-Sha256:
- 581a86c03e6054c5fa8ed2a015e3a0a437e6720214446afd902a695b54e25aed 1189 mx-test-installer_0.16.4.dsc
- 3d6bf490c501b2a8b80c52e598d9d59de2c6483fcb1c4f333acccede795e20c6 197452 mx-test-installer_0.16.4.tar.xz
- 78417c7f3403e046fbbe29f840a75c1dc4d3c599349ddcef6c495d7e66556772 32894 mx-test-installer_0.16.4_amd64.deb
+ af252583e885a9f10e86aa9e9688f073e67de9386f42649b70cc260447691a58 668 mx-test-installer_0.16.4.dsc
+ ff0fabc3bec505cea3d308b6499aa3560d1bc80850788106101afb469cb8d1d5 277544 mx-test-installer_0.16.4.tar.xz
+ 8e94a981fc1cee99c9fdc282ce44fefcb5c843294328d45e97551e1c5f08aacd 37022 mx-test-installer_0.16.4_amd64.deb
 Files:
- c2782301e4a6b1412686a9c03c23db5a 1189 admin optional mx-test-installer_0.16.4.dsc
- 971d6478c8f793acf416a0efb10b8d9d 197452 admin optional mx-test-installer_0.16.4.tar.xz
- 39e25b4593cf61c445deee7997335047 32894 admin optional mx-test-installer_0.16.4_amd64.deb
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1
-
-iQEcBAEBAgAGBQJXDEzKAAoJEHCTjHgGee6YuBYIALeerYJQjG+00v5dA9XOklUz
-XoB8g2DJCjuYnG4G5nMug1lnwvupk+0nVOaFQvcMKxn6iu2BllMBpVUjEzrgORlU
-PaYUkYy87fs1zeoKJnTV7+BMj+9D+aYN7ucAm5EbbICCGn4ptNU+FqsMtK1H8pNN
-3PA6HqFzGHpz5Y+RrsoYUUPqQGPxB2DqN1JdUr11An5ImsJbwhirEmcMPNxRZJnQ
-HSo504T9+LNeDX7Ln9UOHNOWPeZnwP/rhkkpEoyeo1G5vcMJFScGu0IpGlGV1Ijj
-oe/4x5Oya+eunHlhECSsV2jQGXv25ncPZx6Phmu6NC1VCdBBUrKzkfeC5BvzFy4=
-=MEKE
------END PGP SIGNATURE-----
+ 0f00e37cd55149f7a51ac4e71fb0dbde 668 admin optional mx-test-installer_0.16.4.dsc
+ 7b581031f85686c27aceb5ccf52826eb 277544 admin optional mx-test-installer_0.16.4.tar.xz
+ 5a92a8c0ae73a0927b0335d5a75aa8aa 37022 admin optional mx-test-installer_0.16.4_amd64.deb

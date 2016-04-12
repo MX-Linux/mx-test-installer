@@ -12,10 +12,12 @@ TARGET = mx-test-installer
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += main.cpp \
+    versionnumber.cpp \
+    mainwindow.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    versionnumber.h
 
 FORMS    += mainwindow.ui
 

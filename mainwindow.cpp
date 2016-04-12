@@ -1,5 +1,31 @@
+/**********************************************************************
+ *  mainwindow.cpp
+ **********************************************************************
+ * Copyright (C) 2016 MX Authors
+ *
+ * Authors: dolphin_oracle
+ *          Adrian
+ *          MX & MEPIS Community <http://forum.mepiscommunity.org>
+ *
+ * This file is part of mx-test-installer
+ *
+ * mx-test-installer is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * mx-test-installer is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with mx-test-installer.  If not, see <http://www.gnu.org/licenses/>.
+ **********************************************************************/
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "versionnumber.h"
 
 #include <QProcess>
 #include <QRadioButton>
@@ -71,8 +97,8 @@ void MainWindow::displayMXlist(QStringList mxlist)
     QString app_info;
     QString apps;
     QString item;
-    QString installed;
-    QString candidate;
+    VersionNumber installed;
+    VersionNumber candidate;
     QStringList app_info_list;
     QTreeWidgetItem *widget_item;
 
@@ -101,31 +127,32 @@ void MainWindow::displayMXlist(QStringList mxlist)
         widget_item->setText(1, app_name);
         widget_item->setText(2, app_ver);
         widget_item->setText(3, app_desc);
-        if (installed == "(none)") {
+        if (installed.toString() == "(none)") {
             for (int i = 0; i < 4; ++i) {
                 widget_item->setBackground(i, Qt::white);
-                widget_item->setToolTip(i, "Version " + candidate + " in stable repo" );
+                widget_item->setToolTip(i, "Version " + candidate.toString() + " in stable repo" );
             }
-        } else if (installed == "") {
+        } else if (installed.toString() == "") {
             for (int i = 0; i < 4; ++i) {
                 widget_item->setBackground(i, Qt::white);
                 widget_item->setToolTip(i, "Not available in stable repo" );
             }
         } else {
             candidate = app_info.section(" ", 0, 0); // candidate version
-            if (installed == candidate) {
+            if (installed >= candidate) {
                 for (int i = 0; i < 4; ++i) {
                     widget_item->setBackground(i, Qt::green);
-                    widget_item->setToolTip(i, "Latest version already installed");
+                    widget_item->setToolTip(i, "Latest version " + installed.toString() + " already installed");
                 }
             } else {
                 for (int i = 0; i < 4; ++i) {
                     widget_item->setBackground(i, Qt::yellow);
-                    widget_item->setToolTip(i, "Version " + installed + " installed");
+                    widget_item->setToolTip(i, "Version " + installed.toString() + " installed");
                 }
             }
         }
     }
+
     for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
         ui->treeWidget->resizeColumnToContents(i);
     }
@@ -219,4 +246,10 @@ void MainWindow::on_buttonAbout_clicked()
         system("mx-viewer file:///usr/share/doc/mx-test-installer/license.html '" + tr("MX Test Installer").toUtf8() + " " + tr("License").toUtf8() + "'");
     }
     this->show();
+}
+
+void MainWindow::on_buttonHelp_clicked()
+{
+    QString cmd = QString("mx-viewer http://www.mepiscommunity.org/wiki/help-files/help-mx-test-installer '%1'").arg(tr("MX Test Installer"));
+        system(cmd.toUtf8());
 }
