@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->show();
     version = getVersion("mx-system-sounds");
     qApp->processEvents();
-//    runCmd("build-test-package-list.sh");
+    runCmd("build-test-package-list.sh");
     start();
 }
 
