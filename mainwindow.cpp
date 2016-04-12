@@ -94,10 +94,13 @@ QStringList MainWindow::readMXlist()
 void MainWindow::displayMXlist(QStringList mxlist)
 {
     QHash<QString, QString> hashApp; // hash that contains (app_name, app_info) for the mxlist
+    QHash<QString, VersionNumber> hashInstalled; // hash that contains (app_name, VersionNumber) returned by apt-cache policy
     QString app_name;
     QString app_info;
     QString apps;
     QString item;
+    QString app_ver;
+    QString app_desc;
     VersionNumber installed;
     VersionNumber candidate;
     QStringList app_info_list;
@@ -116,12 +119,19 @@ void MainWindow::displayMXlist(QStringList mxlist)
     }
     QString info_installed = runCmd("apt-cache policy " + apps + "|grep Installed -B1").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
+    // create a hash of name and installed version
     foreach(item, app_info_list) {
         app_name = item.section(":", 0, 0).trimmed();
-        app_info = hashApp[app_name];
-        QString app_ver = app_info.section(" ", 0, 0);
-        QString app_desc = app_info.section("  ", 1, -1);
         installed = item.section("\n  ", 1, 1).trimmed().section(": ", 1, 1); // Installed version
+        hashInstalled.insert(app_name, installed);
+    }
+    // process the entire list of apps
+    foreach(item, mxlist) {
+        app_name = item.section(" ", 0, 0);
+        app_info = hashApp[app_name];
+        app_ver = app_info.section(" ", 0, 0);
+        app_desc = app_info.section("  ", 1, -1);
+        installed = hashInstalled[app_name];
         widget_item = new QTreeWidgetItem(ui->treeWidget);
         widget_item->setFlags(widget_item->flags());
         widget_item->setCheckState(0, Qt::Unchecked);
