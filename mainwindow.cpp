@@ -33,7 +33,7 @@ Output MainWindow::runCmd(QString cmd)
     QEventLoop loop;
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
     proc->setReadChannelMode(QProcess::MergedChannels);
-    proc->start("/bin/bash", QStringList() << "-c" << cmd);    
+    proc->start("/bin/bash", QStringList() << "-c" << cmd);
     loop.exec();
     Output out = {proc->exitCode(), proc->readAll().trimmed()};
     delete proc;
@@ -74,46 +74,61 @@ void MainWindow::displayMXlist(QStringList mxlist)
     QString installed;
     QString candidate;
     QStringList app_info_list;
-    QListWidgetItem *widget_item;
+    QTreeWidgetItem *widget_item;
 
     //system("notify-send -i application-x-deb 'Test Repo Installer' 'List Packages'");
     startProgressBar();
-    ui->listWidget->clear();
+    ui->treeWidget->clear();
 
     // create a list of apps, create a hash with app_name, app_info
-    foreach(item, mxlist) {        
+    foreach(item, mxlist) {
         app_name = item.section(" ", 0, 0);
         app_info = item.section(" ", 1, -1);
         hashApp.insert(app_name, app_info);
         apps += app_name + " "; // all the apps
-    } 
+    }
     QString info_installed = runCmd("apt-cache policy " + apps + "|grep Installed -B1").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
     foreach(item, app_info_list) {
         app_name = item.section(":", 0, 0).trimmed();
         app_info = hashApp[app_name];
+        QString app_ver = app_info.section(" ", 0, 0);
+        QString app_desc = app_info.section("  ", 1, -1);
         installed = item.section("\n  ", 1, 1).trimmed().section(": ", 1, 1); // Installed version
-        widget_item = new QListWidgetItem(ui->listWidget);
+        widget_item = new QTreeWidgetItem(ui->treeWidget);
         widget_item->setFlags(widget_item->flags());
-        widget_item->setCheckState(Qt::Unchecked);
-        widget_item->setText(app_name +  " " + app_info);
+        widget_item->setCheckState(0, Qt::Unchecked);
+        widget_item->setText(1, app_name);
+        widget_item->setText(2, app_ver);
+        widget_item->setText(3, app_desc);
         if (installed == "(none)") {
-            widget_item->setBackgroundColor(Qt::white);
-            widget_item->setToolTip("Version " + candidate + " in stable repo" );
+            for (int i = 0; i < 4; ++i) {
+                widget_item->setBackground(i, Qt::white);
+                widget_item->setToolTip(i, "Version " + candidate + " in stable repo" );
+            }
         } else if (installed == "") {
-            widget_item->setBackgroundColor(Qt::white);
-            widget_item->setToolTip("Not available in stable repo" );
+            for (int i = 0; i < 4; ++i) {
+                widget_item->setBackground(i, Qt::white);
+                widget_item->setToolTip(i, "Not available in stable repo" );
+            }
         } else {
             candidate = app_info.section(" ", 0, 0); // candidate version
             if (installed == candidate) {
-                widget_item->setBackgroundColor(Qt::green);
-                widget_item->setToolTip("Latest version already installed");
+                for (int i = 0; i < 4; ++i) {
+                    widget_item->setBackground(i, Qt::green);
+                    widget_item->setToolTip(i, "Latest version already installed");
+                }
             } else {
-                widget_item->setBackgroundColor(Qt::yellow);
-                widget_item->setToolTip("Version " + installed + " installed");
+                for (int i = 0; i < 4; ++i) {
+                    widget_item->setBackground(i, Qt::yellow);
+                    widget_item->setToolTip(i, "Version " + installed + " installed");
+                }
             }
         }
-    }   
+    }
+    for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
+        ui->treeWidget->resizeColumnToContents(i);
+    }
     stopProgressBar();
 }
 
@@ -174,18 +189,16 @@ void MainWindow::on_buttonInstall_clicked()
 }
 
 
-void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
+void MainWindow::on_treeWidget_itemClicked(QTreeWidgetItem *item)
 {
-    QString newapp = QString(item->text());
-    QString newapp2 = newapp.section(' ', 0, 0);
-    if (item->checkState()) {
+    QString newapp = QString(item->text(1));
+    if (item->checkState(0) == Qt::Checked) {
         qDebug() << newapp;
-        qDebug() << newapp2;
-        changeset.append(newapp2);
+        changeset.append(newapp);
         qDebug() << changeset;
     } else {
         qDebug() << "item uchecked";
-        changeset.removeOne(newapp2);
+        changeset.removeOne(newapp);
         qDebug() << changeset;
     }
 }
