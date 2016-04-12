@@ -32,6 +32,7 @@
 #include <QDir>
 #include <QMessageBox>
 #include <QHash>
+#include <QKeyEvent>
 
 #include <QDebug>
 
@@ -42,7 +43,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->show();
-    version = getVersion("mx-system-sounds");
+    version = getVersion("mx-test-installer");
     qApp->processEvents();
     runCmd("build-test-package-list.sh");
     start();
@@ -95,7 +96,6 @@ void MainWindow::displayMXlist(QStringList mxlist)
 {
     QHash<QString, QString> hashApp; // hash that contains (app_name, app_info) for the mxlist
     QHash<QString, VersionNumber> hashInstalled; // hash that contains (app_name, VersionNumber) returned by apt-cache policy
- //   QHash<QString, VersionNumber> hashCandidate; //hash that contains (app_name, Candidate Version) returned by apt-cache policy
     QString app_name;
     QString app_info;
     QString apps;
@@ -124,9 +124,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
     foreach(item, app_info_list) {
         app_name = item.section(":", 0, 0).trimmed();
         installed = item.section("\n  ", 1, 1).trimmed().section(": ", 1, 1); // Installed version
-    //    candidate = item.section("\n  ", 2, 2).trimmed().section(": ", 1, 1); // Candidate version
         hashInstalled.insert(app_name, installed);
-     //   hashCandidate.insert(app_name, candidate);
     }
     // process the entire list of apps
     foreach(item, mxlist) {
@@ -135,7 +133,6 @@ void MainWindow::displayMXlist(QStringList mxlist)
         app_ver = app_info.section("  ", 0, 0).trimmed();
         app_desc = app_info.section("  ", 1, -1);
         installed = hashInstalled[app_name];
-    //    candidate = hashCandidate[app_name];
         widget_item = new QTreeWidgetItem(ui->treeWidget);
         widget_item->setFlags(widget_item->flags());
         widget_item->setCheckState(0, Qt::Unchecked);
@@ -172,6 +169,54 @@ void MainWindow::displayMXlist(QStringList mxlist)
         ui->treeWidget->resizeColumnToContents(i);
     }
     stopProgressBar();
+}
+
+// process keystrokes
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{    
+    if (event->key() != Qt::Key_Escape) {
+        search(event->text());
+    } else if (searchBox->isVisible()) {
+        hideSearch();
+    }
+}
+
+void MainWindow::hideSearch()
+{
+    searchBox->hide();
+    QTreeWidgetItemIterator it(ui->treeWidget);
+    while (*it) {
+        (*it)->setHidden(false);
+        ++it;
+    }
+}
+
+// search entered text starting with the first keystroke
+void MainWindow::search(QString key)
+{
+    searchBox = new QLineEdit(this);
+    searchBox->move(this->geometry().width() - 120,this->geometry().height() - 100);
+    searchBox->setFocus();
+    searchBox->show();
+    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
+    connect(searchBox,SIGNAL(returnPressed()),this, SLOT(findPackage()));
+    searchBox->setText(key); // process the first keystroke
+}
+
+// find packages
+void MainWindow::findPackage()
+{    
+    QString word = searchBox->text();
+    QList<QTreeWidgetItem *> found_items = ui->treeWidget->findItems(word, Qt::MatchContains, 1);
+    QTreeWidgetItemIterator it(ui->treeWidget);
+    while (*it) {
+      if (!found_items.contains(*it) ) {
+          (*it)->setHidden(true);
+      } else {
+          (*it)->setHidden(false);
+      }
+      ++it;
+    }
 }
 
 void MainWindow::startProgressBar()
@@ -227,6 +272,7 @@ void MainWindow::on_buttonInstall_clicked()
     runCmd("su-to-root -X -c 'x-terminal-emulator -e apt-get update'");
     changeset.clear();
     qDebug() << changeset;
+    hideSearch();
     start();
 }
 

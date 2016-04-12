@@ -30,6 +30,7 @@
 #include <QTimer>
 #include <QProgressDialog>
 #include <QProgressBar>
+#include <QLineEdit>
 
 namespace Ui {
 class MainWindow;
@@ -54,6 +55,7 @@ public:
     QStringList readMXlist();
 
     void displayMXlist(QStringList mxlist);
+    void hideSearch();
     void start();
     void startProgressBar();
     void stopProgressBar();
@@ -61,6 +63,8 @@ public:
     Output runCmd(QString cmd);
 
 private slots:
+    void search(QString key);
+    void findPackage();
     void procTime();
     void on_buttonCancel_clicked();
     void on_buttonInstall_clicked();
@@ -68,10 +72,13 @@ private slots:
     void on_treeWidget_itemClicked(QTreeWidgetItem *item);
     void on_buttonHelp_clicked();
 
-private:
+private:            
     QProgressDialog *progress;
     QTimer *timer;
+    QLineEdit *searchBox;
     Ui::MainWindow *ui;
+
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // MAINWINDOW_H
