@@ -45,6 +45,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->show();
     version = getVersion("mx-test-installer");
     qApp->processEvents();
+    searchBox = new QLineEdit(this);
     runCmd("build-test-package-list.sh");
     start();
 }
@@ -174,16 +175,16 @@ void MainWindow::displayMXlist(QStringList mxlist)
 // process keystrokes
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {    
-    if (event->key() != Qt::Key_Escape) {
+    if (event->key() == Qt::Key_Escape) {
+        closeSearch();
+    } else if (event->text().trimmed() != "") {  // get rid of Enter and modifier key presses
         search(event->text());
-    } else if (searchBox->isVisible()) {
-        hideSearch();
     }
 }
 
-void MainWindow::hideSearch()
+void MainWindow::closeSearch()
 {
-    searchBox->hide();
+    searchBox->close();
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
         (*it)->setHidden(false);
@@ -197,9 +198,8 @@ void MainWindow::search(QString key)
     searchBox = new QLineEdit(this);
     searchBox->move(this->geometry().width() - 120,this->geometry().height() - 100);
     searchBox->setFocus();
-    searchBox->show();
-    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
-    connect(searchBox,SIGNAL(returnPressed()),this, SLOT(findPackage()));
+    searchBox->show();    
+    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));    
     searchBox->setText(key); // process the first keystroke
 }
 
@@ -272,7 +272,7 @@ void MainWindow::on_buttonInstall_clicked()
     runCmd("su-to-root -X -c 'x-terminal-emulator -e apt-get update'");
     changeset.clear();
     qDebug() << changeset;
-    hideSearch();
+    closeSearch();
     start();
 }
 

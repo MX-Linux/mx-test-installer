@@ -54,8 +54,7 @@ public:
     QStringList changeset;
     QStringList readMXlist();
 
-    void displayMXlist(QStringList mxlist);
-    void hideSearch();
+    void displayMXlist(QStringList mxlist);    
     void start();
     void startProgressBar();
     void stopProgressBar();
@@ -63,6 +62,7 @@ public:
     Output runCmd(QString cmd);
 
 private slots:
+    void closeSearch();
     void search(QString key);
     void findPackage();
     void procTime();
@@ -77,7 +77,6 @@ private:
     QTimer *timer;
     QLineEdit *searchBox;
     Ui::MainWindow *ui;
-
     void keyPressEvent(QKeyEvent *event);
 };
 
