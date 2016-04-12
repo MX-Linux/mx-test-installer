@@ -26,7 +26,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
 #include <QTreeWidgetItem>
 #include <QTimer>
 #include <QProgressDialog>
@@ -42,7 +41,7 @@ struct Output {
     QString str;
 };
 
-class MainWindow : public QMainWindow
+class MainWindow : public QDialog
 {
     Q_OBJECT
 
