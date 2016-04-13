@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Sun, 10 Apr 2016 10:59:55 -0400
+Source: mx-test-installer
+Binary: mx-test-installer
+Architecture: source amd64
+Version: 0.16.4mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-test-installer - mx-test-installer
+Changes:
+ mx-test-installer (0.16.4mx15) mx; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 48b4820bf27a2300c552f225b5e4366246dfa40f 1205 mx-test-installer_0.16.4mx15.dsc
+ 9f471550888b730de68629f208423be808c716c1 158896 mx-test-installer_0.16.4mx15.tar.xz
+ 6b1d80b983e9f1b0867d446844e376603db17a6a 37588 mx-test-installer_0.16.4mx15_amd64.deb
+Checksums-Sha256:
+ 087b9f14308434a057c4436911de7ee6bd384b082590ea68cfc16e27b2af924e 1205 mx-test-installer_0.16.4mx15.dsc
+ 99093f66b58edaf38e7b4d904d1ad8b1d3922879643abc0bc9b639d7a4a78873 158896 mx-test-installer_0.16.4mx15.tar.xz
+ 385c959e287e2d6f1b7df7ad2ca39ffba6df9d56a79fe6a4be04a05188290b8b 37588 mx-test-installer_0.16.4mx15_amd64.deb
+Files:
+ 0f532a4fbbd4b215e018e2cc292534e2 1205 admin optional mx-test-installer_0.16.4mx15.dsc
+ ab026f0d0ac778113f7c19468abec101 158896 admin optional mx-test-installer_0.16.4mx15.tar.xz
+ 1bd97bd7db412f4aee1b95480a2e17ef 37588 admin optional mx-test-installer_0.16.4mx15_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJXDmgVAAoJEHCTjHgGee6YJEkH/3imOsiYRExBjCnhafkHbaNS
+4YsCK8FEuAbUSYj6J6e3opDF6vvphOaU6787UaPyUa8kkvEBkFjK0fqVRB05QnNq
+CbW0EP1cnpupploZRWkNlOkxDVkD9hSTDHL1RUV7CEGcLJTwDF3+N3F7WVN+xVo+
+dStECk6hcoPTClIJO8HKfvn3FPHu+/TRPx1paTzIeiFdCpCHbW7MXCPIC/PrApID
+8Kbq2bkwo9YKLmgIIbqOJyL0/Cz1NgkEzvFdnAlXw9vgDJcFLDFuJq5UufVoAdkA
+iMLIi6TQZciKiq1l+UPcbz4oMvA/rcfKUC8Jhwel7h0/kxUoswfBbWs6/dDPWC8=
+=MMqJ
+-----END PGP SIGNATURE-----
