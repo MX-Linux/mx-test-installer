@@ -31,6 +31,7 @@
 #include <QTranslator>
 #include <QLocale>
 #include <QIcon>
+#include <QMessageBox>
 
 int main(int argc, char *argv[])
 {
@@ -44,8 +45,17 @@ int main(int argc, char *argv[])
     appTran.load(QString("mx-test-installer_") + QLocale::system().name(), "/usr/share/mx-test-installer/locale");
     a.installTranslator(&appTran);
 
-    MainWindow w;
-    w.show();
+    if (getuid() == 0) {
+        MainWindow w;
+        w.show();
 
-    return a.exec();
+        return a.exec();
+
+    } else {
+        QApplication::beep();
+        QMessageBox::critical(0, QString::null,
+                              QApplication::tr("You must run this program as root."));
+        return 1;
+    }
+
 }

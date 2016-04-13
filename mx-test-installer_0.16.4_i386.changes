@@ -1,0 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Sun, 10 Apr 2016 10:59:55 -0400
+Source: mx-test-installer
+Binary: mx-test-installer
+Architecture: i386
+Version: 0.16.4
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-test-installer - mx-test-installer
+Changes:
+ mx-test-installer (0.16.4) mx; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 6d570ec8894bdd070634719125e5af8296d1bee7 38332 mx-test-installer_0.16.4_i386.deb
+Checksums-Sha256:
+ a367b3195d05766ba9e097b1d43660d2793677c78dc66c2d07b870f0a04111ee 38332 mx-test-installer_0.16.4_i386.deb
+Files:
+ f5b8f74df789f4cef243b9ae02dc6ae3 38332 admin optional mx-test-installer_0.16.4_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJXDlJvAAoJEHCTjHgGee6YMGgH/0g4ynex//1qRYxgt2s1ujo+
+KZzF1hB8E/GJ4wRHBJ2luJG35QsT44/BJ+dT56B1/Cvmp+htfMjW+7jsOtXg4phI
+0UHO4ohJ0cp37jo8wNr1Cvpn3KAecuUphEtgimQpaJ/OiFjuwrVRPJ6VQDCKC+ab
+0Aj1WBqBjhEFD4p9Dj6+r2jy6ylDVyxkthMkVn5NqbhQ/7tOqy1HcgYgFLQC90ot
+wk/TaOF3yJR5MeVfQNkVGOTlCfLG18qYUR5wc0OEpUY3c7H4cNE7B4SSU4Ah6FMF
+r44HL8LbFyJccajkL2p2h9rfaECijUD5T/xG9+LgWCugauVPhNn5uachkRfqr2c=
+=Ugm9
+-----END PGP SIGNATURE-----

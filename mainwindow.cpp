@@ -87,7 +87,7 @@ QStringList MainWindow::readMXlist()
 {
     QString file_content;
     QStringList mxlist;
-    file_content = runCmd("cat " + QDir::homePath() + "/.config/mx-test-installer/packagelist.txt").str;
+    file_content = runCmd("cat /tmp/mx-test-installer/packagelist.txt").str;
     mxlist = file_content.split("\n");
     return mxlist;
 }
@@ -124,7 +124,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
     app_info_list = info_installed.split("--"); // list of installed apps
     // create a hash of name and installed version
     foreach(item, app_info_list) {
-        qDebug() << item;
+        //qDebug() << item;
         app_name = item.section(":", 0, 0).trimmed();
         installed = item.section("\n  ", 1, 1).trimmed().section(": ", 1, 1); // Installed version
         candidate = item.section("\n  ", 2, 2).trimmed().section(": ", 1, 1);
@@ -145,8 +145,8 @@ void MainWindow::displayMXlist(QStringList mxlist)
         widget_item->setText(2, app_ver);
         widget_item->setText(3, app_desc);
         candidate = hashCandidate[app_name];
-        qDebug() << installed.toString();
-        qDebug() << candidate.toString();
+        //qDebug() << installed.toString();
+        //qDebug() << candidate.toString();
         VersionNumber candidatetest = QString(app_ver);
         if (installed.toString() == "(none)") {
             for (int i = 0; i < 4; ++i) {
@@ -182,11 +182,10 @@ void MainWindow::displayMXlist(QStringList mxlist)
 // process keystrokes
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {    
-    if (event->key() == Qt::Key_Escape) {
+    if (event->matches(QKeySequence::Find))
+        search();
+    if (event->key() == Qt::Key_Escape)
         closeSearch();
-    } else if (event->text().trimmed() != "") {  // get rid of Enter and modifier key presses
-        search(event->text());
-    }
 }
 
 void MainWindow::closeSearch()
@@ -200,14 +199,13 @@ void MainWindow::closeSearch()
 }
 
 // search entered text starting with the first keystroke
-void MainWindow::search(QString key)
+void MainWindow::search()
 {
     searchBox = new QLineEdit(this);
     searchBox->move(this->geometry().width() - 120,this->geometry().height() - 100);
     searchBox->setFocus();
     searchBox->show();    
-    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));    
-    searchBox->setText(key); // process the first keystroke
+    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));        
 }
 
 // find packages
@@ -272,13 +270,13 @@ void MainWindow::on_buttonInstall_clicked()
         aptgetlist = QString(aptgetlist + " " + listing);
         qDebug() << aptgetlist;
     }
-    runCmd("su-to-root -X -c 'echo deb http://main.mepis-deb.org/mx/testrepo/ mx15 test>/etc/apt/sources.list.d/mxtestrepotemp.list'");
-    runCmd("su-to-root -X -c 'x-terminal-emulator -e apt-get update'");
-    runCmd("su-to-root -X -c 'x-terminal-emulator -e apt-get install " + aptgetlist +"'");
-    runCmd("su-to-root -X -c 'rm -f /etc/apt/sources.list.d/mxtestrepotemp.list'");
-    runCmd("su-to-root -X -c 'x-terminal-emulator -e apt-get update'");
+    runCmd("echo deb http://main.mepis-deb.org/mx/testrepo/ mx15 test>/etc/apt/sources.list.d/mxtestrepotemp.list");
+    runCmd("x-terminal-emulator -e apt-get update");
+    runCmd("x-terminal-emulator -e apt-get install " + aptgetlist);
+    runCmd("rm -f /etc/apt/sources.list.d/mxtestrepotemp.list");
+    runCmd("x-terminal-emulator -e apt-get update");
     changeset.clear();
-    qDebug() << changeset;
+    //qDebug() << changeset;
     closeSearch();
     start();
 }
@@ -288,13 +286,13 @@ void MainWindow::on_treeWidget_itemClicked(QTreeWidgetItem *item)
 {
     QString newapp = QString(item->text(1));
     if (item->checkState(0) == Qt::Checked) {
-        qDebug() << newapp;
+        //qDebug() << newapp;
         changeset.append(newapp);
-        qDebug() << changeset;
+        //qDebug() << changeset;
     } else {
-        qDebug() << "item uchecked";
+        //qDebug() << "item uchecked";
         changeset.removeOne(newapp);
-        qDebug() << changeset;
+        //qDebug() << changeset;
     }
 }
 

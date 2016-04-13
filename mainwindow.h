@@ -63,7 +63,7 @@ public:
 
 private slots:
     void closeSearch();
-    void search(QString key);
+    void search();
     void findPackage();
     void procTime();
     void on_buttonCancel_clicked();

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 Format: 1.8
 Date: Sun, 10 Apr 2016 10:59:55 -0400
 Source: mx-test-installer
@@ -15,14 +18,26 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 3b11ccd382bbbbb86b9c82aa1ebb04466caf655e 665 mx-test-installer_0.16.4.dsc
- 55d5cc60be4fa578df56567be59c3a2697b0ebd9 18924 mx-test-installer_0.16.4.tar.xz
- bad3d06ca4da15b3423c43b3f19aabbd335d8a58 40098 mx-test-installer_0.16.4_amd64.deb
+ efb4b6aa3887a292b7bcc700964af886ae15f865 1189 mx-test-installer_0.16.4.dsc
+ c9345b5eae4f7e3f5a18b0cb64cc376a607d4001 122324 mx-test-installer_0.16.4.tar.xz
+ 016f2157aa32617940e6411dd4aba912c481f6e5 37566 mx-test-installer_0.16.4_amd64.deb
 Checksums-Sha256:
- 7abda5057122478fe6b6a255b63367535c72029324ae2a4b3f580192c05be34e 665 mx-test-installer_0.16.4.dsc
- 62248eea59e2332f92fb7e1a68917bb5d012139c84738e855cfeba1b63040d52 18924 mx-test-installer_0.16.4.tar.xz
- 02b896f47c03f7e05cb332a1e4f3b29b2978b9f6df1852f70fdc63380b437c3c 40098 mx-test-installer_0.16.4_amd64.deb
+ 502eaf7fe935edaa05754fd1a6da733691914b69b8671c321597d19379570641 1189 mx-test-installer_0.16.4.dsc
+ f53f336dfff4b000daf18c07da2461827d285757f4318a6ae55679bbde1305f1 122324 mx-test-installer_0.16.4.tar.xz
+ e3aa04831a0896d6bcf93a31a483b5668cb815fc337f7919b87b8ee14a5ecbcf 37566 mx-test-installer_0.16.4_amd64.deb
 Files:
- f2100a8e7c30ea406dae32fa831afc6e 665 admin optional mx-test-installer_0.16.4.dsc
- f0792d1718d5f4f7e881581ae15a9b7e 18924 admin optional mx-test-installer_0.16.4.tar.xz
- 4830714ce855f36c063f5da13ec35ffe 40098 admin optional mx-test-installer_0.16.4_amd64.deb
+ b5b7c67dec518f24dda5fb383ee5dbec 1189 admin optional mx-test-installer_0.16.4.dsc
+ 5e87bd52a0728085941d5b4e0f96f9d1 122324 admin optional mx-test-installer_0.16.4.tar.xz
+ 4d8c79d5a9262e07083cabc9cd0a4ddb 37566 admin optional mx-test-installer_0.16.4_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJXDlIuAAoJEHCTjHgGee6YmrgH/3oaHDOFFgkcft9pX3Cns5qK
+JJKMSGPju9YDEncQSThx25JJCYI/x96vwa0BO/OFMkkpHNEnARO+B1N6ixd8Ajuc
+ScQP4/st+6lmukzEFkodkIZlBN8/m6rM5Gbxru7UbCod+RxYDeAk3Hfg7C3fvEnX
+GJRz5Q2hz9HRhEQUARjs34JmRw6/XM5tEfBw4YSn5yeRt7leO1XopLy5tsD/xbEZ
++xreuEe1r4VSbf8bxw8SSVnB7w0x/sfYCaiaVMSZh1GhAC7DydNRLsMY9YqF/HOJ
+nUp543bDSoBNiQEIJQupEj7ezZXrzJvA408O4y3H+BeeS3xSQ0s0TDUovWnL7FU=
+=b08m
+-----END PGP SIGNATURE-----
