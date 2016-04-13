@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 Format: 1.8
 Date: Sun, 10 Apr 2016 10:59:55 -0400
 Source: mx-test-installer
@@ -18,26 +15,14 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 2008fc1eb5d52374591f8c1b46d9d7a0ec400f91 1189 mx-test-installer_0.16.4.dsc
- 3dfb1cee9ac8f6b520ba2010428db3354ae08535 397248 mx-test-installer_0.16.4.tar.xz
- d4da08d0b7d5e7b036703bc85d8559bc7a4b3a06 39112 mx-test-installer_0.16.4_amd64.deb
+ 3b11ccd382bbbbb86b9c82aa1ebb04466caf655e 665 mx-test-installer_0.16.4.dsc
+ 55d5cc60be4fa578df56567be59c3a2697b0ebd9 18924 mx-test-installer_0.16.4.tar.xz
+ bad3d06ca4da15b3423c43b3f19aabbd335d8a58 40098 mx-test-installer_0.16.4_amd64.deb
 Checksums-Sha256:
- b50f1ffb2bea96baf2db21f102dcbcf0373a66f617d4bca37ce45dbd4616d16e 1189 mx-test-installer_0.16.4.dsc
- 1e6f683dc4d08c894cea924ad8bfc0b559122aa801b618b4470b52a3c6d197d3 397248 mx-test-installer_0.16.4.tar.xz
- 7c63a6c72b0263a4c64b8039654e533dd7a686fa43febb951151310866ee1526 39112 mx-test-installer_0.16.4_amd64.deb
+ 7abda5057122478fe6b6a255b63367535c72029324ae2a4b3f580192c05be34e 665 mx-test-installer_0.16.4.dsc
+ 62248eea59e2332f92fb7e1a68917bb5d012139c84738e855cfeba1b63040d52 18924 mx-test-installer_0.16.4.tar.xz
+ 02b896f47c03f7e05cb332a1e4f3b29b2978b9f6df1852f70fdc63380b437c3c 40098 mx-test-installer_0.16.4_amd64.deb
 Files:
- b45741ecc0160a769c094d690c28fbcf 1189 admin optional mx-test-installer_0.16.4.dsc
- 9aa954071d21468baeafa17b99daf27b 397248 admin optional mx-test-installer_0.16.4.tar.xz
- dede9b5c50085142de0f577366839e33 39112 admin optional mx-test-installer_0.16.4_amd64.deb
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1
-
-iQEcBAEBAgAGBQJXDTEIAAoJEHCTjHgGee6Y7REH/0DhtMkCpDTwsiKy4Z0ZsNb6
-XN0cT2NP4iaatx3WkhMHhJx8dnvtz8QYWQgYf6S9LXUFvmrdzviuyumofFVDXASb
-wfeY2VmS/Qf7lam09n2xq/CRkwnIJ+pwJ29vmZ9MlsvUv6fmfvmQ80lqc3E7/76X
-rPauJCwtunSS8EN5lMFaRRNO4ZgMhYPibH+NUd0UVuCGaksoU6cHICwfWBxTl5s0
-8jWk3LWv94EMEKFcVFSx0m4lYvg3uSZsJpgaOzpgZlNwgQLGKbFLHK+5AaDGuSft
-HjIEC4z8PvtCHu6NGxqbSXDMmQJAGjt99XlFFSrfmEuMQoiOiNJvDTawdLRmcuA=
-=T4FG
------END PGP SIGNATURE-----
+ f2100a8e7c30ea406dae32fa831afc6e 665 admin optional mx-test-installer_0.16.4.dsc
+ f0792d1718d5f4f7e881581ae15a9b7e 18924 admin optional mx-test-installer_0.16.4.tar.xz
+ 4830714ce855f36c063f5da13ec35ffe 40098 admin optional mx-test-installer_0.16.4_amd64.deb

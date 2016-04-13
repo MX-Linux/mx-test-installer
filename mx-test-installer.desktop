@@ -2,9 +2,9 @@
 Version=1.0
 Type=Application
 Name=MX Test Installer
-Comment=
+Comment=Install apps directly from MX Test Repository
 Exec=mx-test-installer
-Icon=system
+Icon=application-x-deb
 Path=
 Terminal=false
 StartupNotify=false
