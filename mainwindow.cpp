@@ -150,22 +150,26 @@ void MainWindow::displayMXlist(QStringList mxlist)
         VersionNumber candidatetest = QString(app_ver);
         if (installed.toString() == "(none)") {
             for (int i = 0; i < 4; ++i) {
+                widget_item->setForeground(i, Qt::black);
                 widget_item->setBackground(i, Qt::white);
                 widget_item->setToolTip(i, "Version " + candidate.toString() + " in stable repo" );
             }
         } else if (installed.toString() == "") {
             for (int i = 0; i < 4; ++i) {
+                widget_item->setForeground(i, Qt::black);
                 widget_item->setBackground(i, Qt::white);
                 widget_item->setToolTip(i, "Not available in stable repo" );
             }
         } else {
             if (installed >= candidatetest) {
                 for (int i = 0; i < 4; ++i) {
+                    widget_item->setForeground(i, Qt::black);
                     widget_item->setBackground(i, Qt::green);
                     widget_item->setToolTip(i, "Latest version " + installed.toString() + " already installed");
                 }
             } else {
                 for (int i = 0; i < 4; ++i) {
+                    widget_item->setForeground(i, Qt::black);
                     widget_item->setBackground(i, Qt::yellow);
                     widget_item->setToolTip(i, "Version " + installed.toString() + " installed");
                 }
