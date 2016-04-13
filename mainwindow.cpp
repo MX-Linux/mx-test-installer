@@ -87,7 +87,7 @@ QStringList MainWindow::readMXlist()
 {
     QString file_content;
     QStringList mxlist;
-    file_content = runCmd("cat " + QDir::homePath() + "/.config/testrepoinstaller/packagelist.txt").str;
+    file_content = runCmd("cat " + QDir::homePath() + "/.config/mx-test-installer/packagelist.txt").str;
     mxlist = file_content.split("\n");
     return mxlist;
 }
@@ -97,6 +97,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
 {
     QHash<QString, QString> hashApp; // hash that contains (app_name, app_info) for the mxlist
     QHash<QString, VersionNumber> hashInstalled; // hash that contains (app_name, VersionNumber) returned by apt-cache policy
+    QHash<QString, VersionNumber> hashCandidate; //hash that contains (app_name, VersionNumber) returned by apt-cache policy for candidates
     QString app_name;
     QString app_info;
     QString apps;
@@ -123,9 +124,12 @@ void MainWindow::displayMXlist(QStringList mxlist)
     app_info_list = info_installed.split("--"); // list of installed apps
     // create a hash of name and installed version
     foreach(item, app_info_list) {
+        qDebug() << item;
         app_name = item.section(":", 0, 0).trimmed();
         installed = item.section("\n  ", 1, 1).trimmed().section(": ", 1, 1); // Installed version
+        candidate = item.section("\n  ", 2, 2).trimmed().section(": ", 1, 1);
         hashInstalled.insert(app_name, installed);
+        hashCandidate.insert(app_name, candidate);
     }
     // process the entire list of apps
     foreach(item, mxlist) {
@@ -140,7 +144,10 @@ void MainWindow::displayMXlist(QStringList mxlist)
         widget_item->setText(1, app_name);
         widget_item->setText(2, app_ver);
         widget_item->setText(3, app_desc);
-        candidate = QString(app_ver);
+        candidate = hashCandidate[app_name];
+        qDebug() << installed.toString();
+        qDebug() << candidate.toString();
+        VersionNumber candidatetest = QString(app_ver);
         if (installed.toString() == "(none)") {
             for (int i = 0; i < 4; ++i) {
                 widget_item->setBackground(i, Qt::white);
@@ -152,7 +159,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
                 widget_item->setToolTip(i, "Not available in stable repo" );
             }
         } else {
-            if (installed >= candidate) {
+            if (installed >= candidatetest) {
                 for (int i = 0; i < 4; ++i) {
                     widget_item->setBackground(i, Qt::green);
                     widget_item->setToolTip(i, "Latest version " + installed.toString() + " already installed");
