@@ -141,36 +141,30 @@ void MainWindow::displayMXlist(QStringList mxlist)
         widget_item = new QTreeWidgetItem(ui->treeWidget);
         widget_item->setFlags(widget_item->flags());
         widget_item->setCheckState(0, Qt::Unchecked);
-        widget_item->setText(1, app_name);
-        widget_item->setText(2, app_ver);
-        widget_item->setText(3, app_desc);
+        widget_item->setText(2, app_name);
+        widget_item->setText(3, app_ver);
+        widget_item->setText(4, app_desc);
         candidate = hashCandidate[app_name];
         //qDebug() << installed.toString();
         //qDebug() << candidate.toString();
         VersionNumber candidatetest = QString(app_ver);
         if (installed.toString() == "(none)") {
-            for (int i = 0; i < 4; ++i) {
-                widget_item->setForeground(i, Qt::black);
-                widget_item->setBackground(i, Qt::white);
+            for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                 widget_item->setToolTip(i, "Version " + candidate.toString() + " in stable repo" );
             }
         } else if (installed.toString() == "") {
-            for (int i = 0; i < 4; ++i) {
-                widget_item->setForeground(i, Qt::black);
-                widget_item->setBackground(i, Qt::white);
+            for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                 widget_item->setToolTip(i, "Not available in stable repo" );
             }
         } else {
             if (installed >= candidatetest) {
-                for (int i = 0; i < 4; ++i) {
-                    widget_item->setForeground(i, Qt::black);
-                    widget_item->setBackground(i, Qt::green);
+                for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
+                    widget_item->setDisabled(true);
                     widget_item->setToolTip(i, "Latest version " + installed.toString() + " already installed");
                 }
             } else {
-                for (int i = 0; i < 4; ++i) {
-                    widget_item->setForeground(i, Qt::black);
-                    widget_item->setBackground(i, Qt::yellow);
+                widget_item->setIcon(1, QIcon::fromTheme("software-update-available", QIcon("/usr/share/icons/gnome/16x16/status/software-update-available.png")));
+                for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                     widget_item->setToolTip(i, "Version " + installed.toString() + " installed");
                 }
             }
@@ -185,7 +179,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
 
 // process keystrokes
 void MainWindow::keyPressEvent(QKeyEvent *event)
-{    
+{
     if (event->matches(QKeySequence::Find))
         search();
     if (event->key() == Qt::Key_Escape)
@@ -208,13 +202,13 @@ void MainWindow::search()
     searchBox = new QLineEdit(this);
     searchBox->move(this->geometry().width() - 120,this->geometry().height() - 100);
     searchBox->setFocus();
-    searchBox->show();    
-    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));        
+    searchBox->show();
+    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
 }
 
 // find packages
 void MainWindow::findPackage()
-{    
+{
     QString word = searchBox->text();
     QList<QTreeWidgetItem *> found_items = ui->treeWidget->findItems(word, Qt::MatchContains, 1);
     QTreeWidgetItemIterator it(ui->treeWidget);

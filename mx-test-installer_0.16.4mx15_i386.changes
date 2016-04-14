@@ -18,20 +18,20 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- dec7b5cb686832493a62bb418dcdff919cfca03b 38472 mx-test-installer_0.16.4mx15_i386.deb
+ 7cc3f8a189d06982f8fde3adea9a7576df713fd9 38392 mx-test-installer_0.16.4mx15_i386.deb
 Checksums-Sha256:
- cdfa30414e6a5dfaea5ca784e04b78442c0f9112504062784ea22da3f1402cfe 38472 mx-test-installer_0.16.4mx15_i386.deb
+ 011ed04a6477c93612608fc0b6fbef4d7a91c0cdc2125fcfbcf5772560678654 38392 mx-test-installer_0.16.4mx15_i386.deb
 Files:
- 3115951c3a17f2e173140109d6bfad14 38472 admin optional mx-test-installer_0.16.4mx15_i386.deb
+ 38512216b007976ee91cae7972df851e 38392 admin optional mx-test-installer_0.16.4mx15_i386.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJXDqwKAAoJEHCTjHgGee6YfMUIAKI/40qf44EPfIMMo2xJvRQB
-C1cSCQcsKl7w6xCxrSVsbQe25tUmqvH1U1TKEM3dWn/E8htNgWABohjJXGjPEnjY
-b5H20wy7aMFUfN9SQTXNW/yzj88IOl+8VG/X36h/98gjg5Kg2SAVE5bKQdvmClxd
-ooMRsLiEcOw82/b2UadwuaS6R8op015a5Rmnv5oxXkCfvk/d2Viw19+A19isYP/l
-fHhBbe+15jYFMCsYLiuXN4hurom7Ttoznu0oybZNpYvaR1SSsSH+1QvQJswR21TC
-u7Qcj43xEzp1GJb21+/nW4rMXoZOinZ3IfJw1i4mcy17xRpPCCp594CWVOj3a7Y=
-=n4Gc
+iQEcBAEBAgAGBQJXDvMgAAoJEHCTjHgGee6YDsAH/28eLQNyhNo+Auyhtf53l2MV
+Q9DPcfw3cZNWENeGWfUEcnxWBJfQncuZT2mgNGMQYIAAeQWrGLHnNowKXh4V9X/G
+vOvSUiuL8wm3BWkMVEGg85ejemztsSQDsVbYhNOAWbBXIqOPArK66um35jqH1OQa
+FGUyKl8MU/1X6hgnLx2fG3xPr1QDVPXe54M1lwVnkzTbaqX9mRmpX4q/9BhYwh+n
+4Of3Ce1ipouwY9EpYs13I10JBhKSWG0RyRJQD6FQRlL8mHb2NEQ+ntuX9Ytb5ydK
+JUXRw6gGW3oJbsZL2fxfPpBlLaTFY+KJcnoWHGJY013JrDWcsW9ZfXsxyIIrC4g=
+=ffZr
 -----END PGP SIGNATURE-----
