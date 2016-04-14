@@ -13,20 +13,20 @@ Build-Depends: qt5-qmake, debhelper (>= 7.0.50~)
 Package-List:
  mx-test-installer deb admin optional arch=any
 Checksums-Sha1:
- 02fc8aa74a3e53c4fbc9d2ebf7cae0aa652fe22d 614528 mx-test-installer_0.16.4mx15.tar.xz
+ dd6d2a652ac45ff4a79c5eec9cb2681ff802ffc1 633664 mx-test-installer_0.16.4mx15.tar.xz
 Checksums-Sha256:
- 5bf2a3e7435dc319ffaa5dcd0ab659a0d1ea52377e8ec659958e1f90ce2172ab 614528 mx-test-installer_0.16.4mx15.tar.xz
+ 1ed80a8160c32cc449ec5a2dc26dfb787ef793850a83d24c43c69666f351c3b4 633664 mx-test-installer_0.16.4mx15.tar.xz
 Files:
- d71dd830ef1532ed8a089375566eaf94 614528 mx-test-installer_0.16.4mx15.tar.xz
+ 5e35a8f0333cc78484d3b98064f7072c 633664 mx-test-installer_0.16.4mx15.tar.xz
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJXD57TAAoJEHCTjHgGee6YeZwH/j5o5OvtE3ME7bWH1a0sPie8
-BYAMea6xtIgqlBSYbSB4AGf29IO1GM6SzZovKprDh4iPSa3Q9tdg6z/Wv49FkBsm
-l1K9PKtI7DtaPaSF0lRS9/3jqHnFS1iDT8gKAulCievYZH1IpBRuGdytu7HEF7tw
-sFmc8e7etVGWqY4aTmSriixUCtzuCSo1wHakKACJt/ZvADcI97QT7/BN+1N+LuDu
-gf66T2GWIEONxpvbef5xLUH+JYq4tOjvXjerwdNa9cTUrHO3gf2BaI2m0hDsMO5W
-jL+g0KLilLiOph6BbZ6pWXS9xnj7eOc1sWI8gE1fSh6mmkNZEJW0d3SmsWUiwLg=
-=DYRE
+iQEcBAEBAgAGBQJXD7RwAAoJEHCTjHgGee6Y99IH/2sunsN6hR6u6IAT7tJicSAe
+SppECYoaKQVCoVjkO/xZun7xFmGhIgS9Lh8yFp3ohyKZt5OsM1p5APuqB5g3QPGz
+LL/8X/ePmYDmOjWVaIqKNs8rMBnaxn47pjv/RQErib8981HI//vJVuczx134FJi0
+Yq1gOUJgxe/hSI/EVVVhxsjF0v4IDC0IT/ENOZrDNIxs4/RcUG37doD00a06yIEy
+umecO/jv6+Y8oXCIFTgvv4fyclmmlAzvoRGRRJNkeAtWdR63pwRo5wNfG8v+UBaS
+hk+go3qTtu3qoDaJpKS+g3T0vfFaZdxF62WkX+8kMuLv68R16sgGHyxCKAhbH44=
+=AXCE
 -----END PGP SIGNATURE-----
