@@ -163,7 +163,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
                     widget_item->setToolTip(i, "Latest version " + installed.toString() + " already installed");
                 }
             } else {
-                widget_item->setIcon(1, QIcon::fromTheme("software-update-available", QIcon("/usr/share/icons/gnome/16x16/status/software-update-available.png")));
+                widget_item->setIcon(1, QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-installer/icons/software-update-available.png")));
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                     widget_item->setToolTip(i, "Version " + installed.toString() + " installed");
                 }
