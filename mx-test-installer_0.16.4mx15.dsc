@@ -10,8 +10,8 @@ Build-Depends: qt5-qmake, debhelper (>= 7.0.50~)
 Package-List:
  mx-test-installer deb admin optional arch=any
 Checksums-Sha1:
- 458771957d681576b4b2d505ac793bb635a116ee 432832 mx-test-installer_0.16.4mx15.tar.xz
+ 05bd767b104e95061eee7cfa8f8c59c4717d508d 564228 mx-test-installer_0.16.4mx15.tar.xz
 Checksums-Sha256:
- 142d1f65a7d0bcd3ec183afb545d8c808c82e938f24aa662af52934b228cdc2b 432832 mx-test-installer_0.16.4mx15.tar.xz
+ 02f6b1d71eda03b7e3ab371117a26a284745415ccb0c8f82f381fa77d69fc209 564228 mx-test-installer_0.16.4mx15.tar.xz
 Files:
- c39f7400a1bb0da2bba799372b887e41 432832 mx-test-installer_0.16.4mx15.tar.xz
+ e6e75781f82c8e5f1ac7ea643750709b 564228 mx-test-installer_0.16.4mx15.tar.xz
