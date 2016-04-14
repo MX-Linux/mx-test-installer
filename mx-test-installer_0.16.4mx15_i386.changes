@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sun, 10 Apr 2016 10:59:55 -0400
+Source: mx-test-installer
+Binary: mx-test-installer
+Architecture: source i386
+Version: 0.16.4mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-test-installer - mx-test-installer
+Changes:
+ mx-test-installer (0.16.4mx15) mx; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ f3006f663d4ffddf5efbd88fe05ee598e5dbf6f0 684 mx-test-installer_0.16.4mx15.dsc
+ 35ef180ae6b25184789c643c47089866c65a7e87 491396 mx-test-installer_0.16.4mx15.tar.xz
+ ccedb24a79fca945a87b383e9ae11a6133ecaac2 39406 mx-test-installer_0.16.4mx15_i386.deb
+Checksums-Sha256:
+ ed3f54445fcde0a1667d370b0c25e5c4a9278d2cd937acdebc97a58e57ab7931 684 mx-test-installer_0.16.4mx15.dsc
+ fc1a7dfa3a5d701185d92567d6bc65eea935b4b8db2f10252206499ca541bf77 491396 mx-test-installer_0.16.4mx15.tar.xz
+ b38ff62646df325d9033207707542ff8a9d4669e527117ced11e2e5904c751a9 39406 mx-test-installer_0.16.4mx15_i386.deb
+Files:
+ 5007599ed5d7100098d758d296052ec0 684 admin optional mx-test-installer_0.16.4mx15.dsc
+ 5478502051faa8d7de4a7db5bc3116ad 491396 admin optional mx-test-installer_0.16.4mx15.tar.xz
+ bfaddb3c3fe82e868378f787abce988f 39406 admin optional mx-test-installer_0.16.4mx15_i386.deb
