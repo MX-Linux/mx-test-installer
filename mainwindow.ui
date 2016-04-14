@@ -24,20 +24,7 @@
   <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="5">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>527</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="4" column="0" colspan="6">
+     <item row="4" column="0" colspan="7">
       <layout class="QGridLayout" name="buttonBar" columnstretch="0,0,0,0,0,0,0,0">
        <property name="sizeConstraint">
         <enum>QLayout::SetDefaultConstraint</enum>
@@ -205,7 +192,60 @@
        </item>
       </layout>
      </item>
-     <item row="3" column="1" colspan="5">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="icon">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>24</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset theme="software-update-available"/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="shortcut">
+        <string notr="true"/>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="6">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>527</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="3" column="1" colspan="6">
       <widget class="QTreeWidget" name="treeWidget">
        <column>
         <property name="text">
@@ -234,7 +274,7 @@
        </column>
       </widget>
      </item>
-     <item row="1" column="3">
+     <item row="1" column="2">
       <widget class="QLabel" name="label">
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in testing repository.</string>
@@ -242,31 +282,21 @@
        <property name="wordWrap">
         <bool>false</bool>
        </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLabel" name="Icon">
-       <property name="minimumSize">
-        <size>
-         <width>16</width>
-         <height>16</height>
-        </size>
-       </property>
-       <property name="pixmap">
-        <pixmap>../../../../../../../../usr/share/mx-test-installer/icons/software-update-available.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>false</bool>
-       </property>
-       <property name="wordWrap">
-        <bool>false</bool>
+       <property name="indent">
+        <number>-1</number>
        </property>
       </widget>
      </item>
-     <item row="2" column="1" colspan="3">
+     <item row="2" column="1" colspan="4">
       <widget class="QLabel" name="label_2">
        <property name="text">
         <string>Greyed out items have already been installed.</string>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <property name="indent">
+        <number>4</number>
        </property>
       </widget>
      </item>
