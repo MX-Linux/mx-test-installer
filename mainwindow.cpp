@@ -210,13 +210,13 @@ void MainWindow::search()
 void MainWindow::findPackage()
 {
     QString word = searchBox->text();
-    QList<QTreeWidgetItem *> found_items = ui->treeWidget->findItems(word, Qt::MatchContains, 1);
+    QList<QTreeWidgetItem *> found_items = ui->treeWidget->findItems(word, Qt::MatchContains, 2);
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
-      if (!found_items.contains(*it) ) {
-          (*it)->setHidden(true);
-      } else {
+      if (found_items.contains(*it) ) {
           (*it)->setHidden(false);
+      } else {
+          (*it)->setHidden(true);
       }
       ++it;
     }
@@ -282,7 +282,7 @@ void MainWindow::on_buttonInstall_clicked()
 
 void MainWindow::on_treeWidget_itemClicked(QTreeWidgetItem *item)
 {
-    QString newapp = QString(item->text(1));
+    QString newapp = QString(item->text(2));
     if (item->checkState(0) == Qt::Checked) {
         //qDebug() << newapp;
         changeset.append(newapp);
