@@ -253,7 +253,7 @@
         </size>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../../../usr/share/icons/gnome/16x16/status/software-update-available.png</pixmap>
+        <pixmap>../../../../../../../../usr/share/mx-test-installer/icons/software-update-available.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
