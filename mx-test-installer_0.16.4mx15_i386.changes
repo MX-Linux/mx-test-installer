@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 Format: 1.8
 Date: Sun, 10 Apr 2016 10:59:55 -0400
 Source: mx-test-installer
 Binary: mx-test-installer
-Architecture: source i386
+Architecture: i386
 Version: 0.16.4mx15
 Distribution: mx
 Urgency: medium
@@ -15,14 +18,20 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- cb4ab512f9681448761f2e38d2099c986aabf54d 684 mx-test-installer_0.16.4mx15.dsc
- f5570579b027e71246e1b2f92ca18c98870ea84b 533436 mx-test-installer_0.16.4mx15.tar.xz
- dfe747dc42973328601b4be5a8fadcd6824158d7 39466 mx-test-installer_0.16.4mx15_i386.deb
+ feb0f3da6afa13f39ae2e4c292a420633202f335 39478 mx-test-installer_0.16.4mx15_i386.deb
 Checksums-Sha256:
- cd22f7e4b3a143c0b2edc7b71312d1f85f1a5a892a11f7ea042092d48de23d98 684 mx-test-installer_0.16.4mx15.dsc
- f429cf442c5b9c75288726295c93d7b23c62ac3ba57894fd46c7d29defc791e7 533436 mx-test-installer_0.16.4mx15.tar.xz
- 2640c65166524048595fc298eeacd9ce0e741c97546cace808f9497d1d748d3b 39466 mx-test-installer_0.16.4mx15_i386.deb
+ 48bc6b229e398c716c9ba99a7425c99c39320d4bccca54ec02982ce444a65e08 39478 mx-test-installer_0.16.4mx15_i386.deb
 Files:
- 139fd196562bf0a9df8a5fd7c08aae0b 684 admin optional mx-test-installer_0.16.4mx15.dsc
- fd6c6c21109f1f73be72fb022fd9f0ff 533436 admin optional mx-test-installer_0.16.4mx15.tar.xz
- d3a730dd22feea9d37175d5dfeb90da4 39466 admin optional mx-test-installer_0.16.4mx15_i386.deb
+ bd76df2643aa067d2ff44b0dd1ab5a0a 39478 admin optional mx-test-installer_0.16.4mx15_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJXD5+8AAoJEHCTjHgGee6Y/ioIALZwkI6XF37v+6FmefECVAb7
+kpMdZStfPZy/0OxXJeGwVLnnG/CNZie8/QoF4lSwbAYbx0mnKT9obLHNbz6kSI3s
+wgkUL6ntPDQs9GHez2JUjZxg8pxgi2GnjV2vu7WtBH+MTwQ/prUfC3S+Fe8gQMfk
+3l0WtEsM8//lEGxa+fUs15P3l0OK5LUg62VIT4vGRtqpTe27jY4vlLT5DMydB6Ub
+DHuomkufqriw8QGfuP8DmbI7wMPgEa7iNNBoKuxYeow4wtu0EEkqvdxSWIMm4Zq9
+5n/d5VOE57ZECmjtDQPFZKNad35n7O1plYToM50HBO11E7NwmspAWK0J4W6qSbg=
+=Imbp
+-----END PGP SIGNATURE-----

@@ -46,6 +46,9 @@ MainWindow::MainWindow(QWidget *parent) :
     version = getVersion("mx-test-installer");
     qApp->processEvents();
     searchBox = new QLineEdit(this);
+    if (system("pgrep xfce4-session") == 0) {
+        QIcon::setThemeName(runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").str);
+    }
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-installer/icons/software-update-available.png")));
     runCmd("build-test-package-list.sh");
     start();

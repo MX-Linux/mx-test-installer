@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 Format: 1.8
 Date: Sun, 10 Apr 2016 10:59:55 -0400
 Source: mx-test-installer
@@ -15,14 +18,26 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 1faa518dddc500e234ba9d134d45c7561124bdc4 684 mx-test-installer_0.16.4mx15.dsc
- 05bd767b104e95061eee7cfa8f8c59c4717d508d 564228 mx-test-installer_0.16.4mx15.tar.xz
- bfb0b889e8546aea24ebfb11368642051233b1fc 38506 mx-test-installer_0.16.4mx15_amd64.deb
+ 2c1fdf5dfcf8e4236ff43048c1af10bcf05d6376 1205 mx-test-installer_0.16.4mx15.dsc
+ 02fc8aa74a3e53c4fbc9d2ebf7cae0aa652fe22d 614528 mx-test-installer_0.16.4mx15.tar.xz
+ 74514249dd9e1e6bcefed518f580b2e8b99deb0b 38656 mx-test-installer_0.16.4mx15_amd64.deb
 Checksums-Sha256:
- 122b9b3662d9ada4875d035c4cdf4597cc8e2f116dfc52b3db9e05ce905adf29 684 mx-test-installer_0.16.4mx15.dsc
- 02f6b1d71eda03b7e3ab371117a26a284745415ccb0c8f82f381fa77d69fc209 564228 mx-test-installer_0.16.4mx15.tar.xz
- 28ab4fa009f8118ddbdbf5c7284a1b788e366512450aafcc97ffd27c4423e26d 38506 mx-test-installer_0.16.4mx15_amd64.deb
+ 03cbbf0d26c307856c8373d647d51bbcd70d604ca313ae4c2b4533c06517d3ba 1205 mx-test-installer_0.16.4mx15.dsc
+ 5bf2a3e7435dc319ffaa5dcd0ab659a0d1ea52377e8ec659958e1f90ce2172ab 614528 mx-test-installer_0.16.4mx15.tar.xz
+ c498353cc0ddf070b78d26e2e1d1b0e9cf4f5b3ad3619f26ccc35b3f5d95b4f4 38656 mx-test-installer_0.16.4mx15_amd64.deb
 Files:
- 6b48e0795e92e0ddcccd218e838f3190 684 admin optional mx-test-installer_0.16.4mx15.dsc
- e6e75781f82c8e5f1ac7ea643750709b 564228 admin optional mx-test-installer_0.16.4mx15.tar.xz
- 7d432e3a658af346aab6eb38768afd30 38506 admin optional mx-test-installer_0.16.4mx15_amd64.deb
+ 3d17fe564991ce9f2873f999ef533faa 1205 admin optional mx-test-installer_0.16.4mx15.dsc
+ d71dd830ef1532ed8a089375566eaf94 614528 admin optional mx-test-installer_0.16.4mx15.tar.xz
+ 07f62ab205f783361bb0008f632e4364 38656 admin optional mx-test-installer_0.16.4mx15_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJXD57XAAoJEHCTjHgGee6Ygs8IAK8Ioe+4sItHznHieoe7tLvS
+QlD+/8Vym+PjJUv/LBpe3Nk8GZXzg1ZHYoswEfCT7L8hsv4QuNgsgpn6pQJMdgDc
+hcZHVuzRYOQSNWhoHNmFXaoB7kobYLbDmbCD5ysn1JUIBPwE5cwO72PPQBcYtgLr
+DphILukO4QxRsYTfuKq+v7CctC3XoldeYfyoy0R+3QzmS/hPjGdl/Wv9udcZVMSL
+HokiPNUHcAVqOZ6sfG0Jp/ipao4FR+neWZ6L2tFGn6wUS93O7M0ctxAYfRrJw35V
+f4r4ATcQX/8aFqWN7x1M/853ygV7C3n0kSU5I/J9cQ1W4fiDgM2cIIHV+TzR79I=
+=aTAm
+-----END PGP SIGNATURE-----
