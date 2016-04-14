@@ -46,6 +46,7 @@ MainWindow::MainWindow(QWidget *parent) :
     version = getVersion("mx-test-installer");
     qApp->processEvents();
     searchBox = new QLineEdit(this);
+    ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-installer/icons/software-update-available.png")));
     runCmd("build-test-package-list.sh");
     start();
 }

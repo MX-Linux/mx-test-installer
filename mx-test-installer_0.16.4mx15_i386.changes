@@ -15,14 +15,14 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- f3006f663d4ffddf5efbd88fe05ee598e5dbf6f0 684 mx-test-installer_0.16.4mx15.dsc
- 35ef180ae6b25184789c643c47089866c65a7e87 491396 mx-test-installer_0.16.4mx15.tar.xz
- ccedb24a79fca945a87b383e9ae11a6133ecaac2 39406 mx-test-installer_0.16.4mx15_i386.deb
+ cb4ab512f9681448761f2e38d2099c986aabf54d 684 mx-test-installer_0.16.4mx15.dsc
+ f5570579b027e71246e1b2f92ca18c98870ea84b 533436 mx-test-installer_0.16.4mx15.tar.xz
+ dfe747dc42973328601b4be5a8fadcd6824158d7 39466 mx-test-installer_0.16.4mx15_i386.deb
 Checksums-Sha256:
- ed3f54445fcde0a1667d370b0c25e5c4a9278d2cd937acdebc97a58e57ab7931 684 mx-test-installer_0.16.4mx15.dsc
- fc1a7dfa3a5d701185d92567d6bc65eea935b4b8db2f10252206499ca541bf77 491396 mx-test-installer_0.16.4mx15.tar.xz
- b38ff62646df325d9033207707542ff8a9d4669e527117ced11e2e5904c751a9 39406 mx-test-installer_0.16.4mx15_i386.deb
+ cd22f7e4b3a143c0b2edc7b71312d1f85f1a5a892a11f7ea042092d48de23d98 684 mx-test-installer_0.16.4mx15.dsc
+ f429cf442c5b9c75288726295c93d7b23c62ac3ba57894fd46c7d29defc791e7 533436 mx-test-installer_0.16.4mx15.tar.xz
+ 2640c65166524048595fc298eeacd9ce0e741c97546cace808f9497d1d748d3b 39466 mx-test-installer_0.16.4mx15_i386.deb
 Files:
- 5007599ed5d7100098d758d296052ec0 684 admin optional mx-test-installer_0.16.4mx15.dsc
- 5478502051faa8d7de4a7db5bc3116ad 491396 admin optional mx-test-installer_0.16.4mx15.tar.xz
- bfaddb3c3fe82e868378f787abce988f 39406 admin optional mx-test-installer_0.16.4mx15_i386.deb
+ 139fd196562bf0a9df8a5fd7c08aae0b 684 admin optional mx-test-installer_0.16.4mx15.dsc
+ fd6c6c21109f1f73be72fb022fd9f0ff 533436 admin optional mx-test-installer_0.16.4mx15.tar.xz
+ d3a730dd22feea9d37175d5dfeb90da4 39466 admin optional mx-test-installer_0.16.4mx15_i386.deb
