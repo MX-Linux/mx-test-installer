@@ -1,7 +1,7 @@
-mx-test-installer 		usr/bin
-mx-test-installer.desktop 	usr/share/applications/mx
-translations/*.qm 		usr/share/mx-test-installer/locale
-icons/*                 	usr/share/mx-test-installer/icons
-license.html            	usr/share/doc/mx-test-installer
+mx-test-repo-installer 		usr/bin
+mx-test-repo-installer.desktop 	usr/share/applications/mx
+translations/*.qm 		usr/share/mx-test-repo-installer/locale
+icons/*                 	usr/share/mx-test-repo-installer/icons
+license.html            	usr/share/doc/mx-test-repo-installer
 build-test-package-list.sh	usr/local/bin
 icons/application-x-deb.png	usr/share/pixmaps

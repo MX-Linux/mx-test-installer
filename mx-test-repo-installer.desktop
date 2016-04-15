@@ -1,13 +1,13 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=MX Test Installer
+Name=MX Test Repo Installer
 Comment=Install apps directly from MX Test Repository
-Exec=su-to-root -X -c mx-test-installer
+Exec=su-to-root -X -c mx-test-repo-installer
 Icon=application-x-deb
 Path=
 Terminal=false
 StartupNotify=false
 Type=Application
 Categories=System
-Name[en_US.UTF-8]=MX Test Installer
+Name[en_US.UTF-8]=MX Test Repo Installer

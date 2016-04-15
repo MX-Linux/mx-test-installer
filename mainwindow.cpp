@@ -7,20 +7,20 @@
  *          Adrian
  *          MX & MEPIS Community <http://forum.mepiscommunity.org>
  *
- * This file is part of mx-test-installer
+ * This file is part of mx-test-repo-installer
  *
- * mx-test-installer is free software: you can redistribute it and/or modify
+ * mx-test-repo-installer is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * mx-test-installer is distributed in the hope that it will be useful,
+ * mx-test-repo-installer is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with mx-test-installer.  If not, see <http://www.gnu.org/licenses/>.
+ * along with mx-test-repo-installer.  If not, see <http://www.gnu.org/licenses/>.
  **********************************************************************/
 
 #include "mainwindow.h"
@@ -43,11 +43,11 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->show();
-    version = getVersion("mx-test-installer");
+    version = getVersion("mx-test-repo-installer");
     qApp->processEvents();
     searchBox = new QLineEdit(this);
-    ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-installer/icons/software-update-available.png")));
-    this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-test-installer/icons/application-x-deb.png")));
+    ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-repo-installer/icons/software-update-available.png")));
+    this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-test-repo-installer/icons/application-x-deb.png")));
     runCmd("build-test-package-list.sh");
     start();
 }
@@ -89,7 +89,7 @@ QStringList MainWindow::readMXlist()
 {
     QString file_content;
     QStringList mxlist;
-    file_content = runCmd("cat /tmp/mx-test-installer/packagelist.txt").str;
+    file_content = runCmd("cat /tmp/mx-test-repo-installer/packagelist.txt").str;
     mxlist = file_content.split("\n");
     return mxlist;
 }
@@ -165,7 +165,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
                     widget_item->setToolTip(i, "Latest version " + installed.toString() + " already installed");
                 }
             } else {
-                widget_item->setIcon(1, QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-installer/icons/software-update-available.png")));
+                widget_item->setIcon(1, QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-repo-installer/icons/software-update-available.png")));
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                     widget_item->setToolTip(i, "Version " + installed.toString() + " installed");
                 }
@@ -301,21 +301,21 @@ void MainWindow::on_buttonAbout_clicked()
 {
     this->hide();
     QMessageBox msgBox(QMessageBox::NoIcon,
-                       tr("About MX Test Installer"), "<p align=\"center\"><b><h2>" +
-                       tr("MX Test Installer") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
+                       tr("About MX Test Repo Installer"), "<p align=\"center\"><b><h2>" +
+                       tr("MX Test Repo Installer") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
                        tr("App for installing directly from MX Test Repo") +
                        "</h3></p><p align=\"center\"><a href=\"http://www.mepiscommunity.org/mx\">http://www.mepiscommunity.org/mx</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("Cancel"), QMessageBox::AcceptRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
     msgBox.addButton(tr("License"), QMessageBox::RejectRole);
     if (msgBox.exec() == QMessageBox::RejectRole) {
-        system("mx-viewer file:///usr/share/doc/mx-test-installer/license.html '" + tr("MX Test Installer").toUtf8() + " " + tr("License").toUtf8() + "'");
+        system("mx-viewer file:///usr/share/doc/mx-test-repo-installer/license.html '" + tr("MX Test Repo Installer").toUtf8() + " " + tr("License").toUtf8() + "'");
     }
     this->show();
 }
 
 void MainWindow::on_buttonHelp_clicked()
 {
-    QString cmd = QString("mx-viewer http://www.mepiscommunity.org/wiki/help-files/help-mx-test-installer '%1'").arg(tr("MX Test Installer"));
+    QString cmd = QString("mx-viewer http://www.mepiscommunity.org/wiki/help-files/help-mx-test-repo-installer '%1'").arg(tr("MX Test Repo Installer"));
         system(cmd.toUtf8());
 }

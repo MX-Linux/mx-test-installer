@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv_SE">
+<TS version="2.1" language="ja_JP">
 <context>
     <name>MainWindow</name>
+    <message>
+        <location filename="../mainwindow.ui" line="14"/>
+        <location filename="../mainwindow.cpp" line="305"/>
+        <location filename="../mainwindow.cpp" line="312"/>
+        <location filename="../mainwindow.cpp" line="319"/>
+        <source>MX Test Repo Installer</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <location filename="../mainwindow.ui" line="56"/>
         <source>Display help </source>
@@ -85,15 +93,7 @@
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="304"/>
-        <source>About MX Test Installer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="305"/>
-        <location filename="../mainwindow.cpp" line="312"/>
-        <location filename="../mainwindow.cpp" line="319"/>
-        <source>MX Test Installer</source>
+        <source>About MX Test Repo Installer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
