@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ro" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -7,17 +7,17 @@
         <location filename="../mainwindow.cpp" line="312"/>
         <location filename="../mainwindow.cpp" line="319"/>
         <source>MX Test Repo Installer</source>
-        <translation>MX Installateur des paquets du dépôt de test</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="56"/>
         <source>Display help </source>
-        <translation>Afficher l&apos;aide</translation>
+        <translation>Afișează ajutor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Help</source>
-        <translation>Aide </translation>
+        <translation>Ajutor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="66"/>
@@ -27,12 +27,12 @@
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>About this application</source>
-        <translation>A propos de cette application</translation>
+        <translation>Informații despre program</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="114"/>
         <source>About...</source>
-        <translation>A propos...</translation>
+        <translation>Despre...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
@@ -42,12 +42,12 @@
     <message>
         <location filename="../mainwindow.ui" line="137"/>
         <source>Quit application</source>
-        <translation>Quitter l&apos;application</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="140"/>
         <source>Close</source>
-        <translation>Fermer</translation>
+        <translation>Închidere</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -57,52 +57,52 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Install</source>
-        <translation>Installer</translation>
+        <translation>Instalare</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="259"/>
         <source>Package Name</source>
-        <translation>Nom du paquet</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="264"/>
         <source>Version</source>
-        <translation>Version</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="269"/>
         <source>Description</source>
-        <translation>Description</translation>
+        <translation>Descriere</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in testing repository.</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= On peut mettre à niveau. Le dépôt de test renferme une nouvelle version de ce paquet.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>Greyed out items have already been installed.</source>
-        <translation>Les paquets en gris ont déjà étés installés.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="234"/>
         <source>Please wait till the database is loaded.</source>
-        <translation>Veuillez attendre jusqu&apos;à ce que la base de données est chargée.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="304"/>
         <source>About MX Test Repo Installer</source>
-        <translation>À propos de MX Installateur des paquets du dépôt de test</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="305"/>
         <source>Version: </source>
-        <translation>Version: </translation>
+        <translation>Versiune:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="306"/>
         <source>App for installing directly from MX Test Repo</source>
-        <translation>Application qui sert à installer directement du dépôt de test MX</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="308"/>
@@ -112,13 +112,13 @@
     <message>
         <location filename="../mainwindow.cpp" line="309"/>
         <source>Cancel</source>
-        <translation>Annuler</translation>
+        <translation>Anulează</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="310"/>
         <location filename="../mainwindow.cpp" line="312"/>
         <source>License</source>
-        <translation>Licence</translation>
+        <translation>Licență</translation>
     </message>
 </context>
 <context>
@@ -126,7 +126,7 @@
     <message>
         <location filename="../main.cpp" line="57"/>
         <source>You must run this program as root.</source>
-        <translation>Vous devez lancer cette application avec les droits root.</translation>
+        <translation>Trebuie să rulați programul ca administrator.</translation>
     </message>
 </context>
 </TS>
