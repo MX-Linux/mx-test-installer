@@ -30,4 +30,4 @@ Path=
 Terminal=false
 StartupNotify=false
 Type=Application
-Categories=System
+Categories=System;MX-Software;

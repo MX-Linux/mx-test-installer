@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Mon, 23 May 2016 07:38:00 -0400
+Source: mx-test-repo-installer
+Binary: mx-test-repo-installer
+Architecture: source i386
+Version: 16.5mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-test-repo-installer - mx-test-repo-installer
+Changes:
+ mx-test-repo-installer (16.5mx15) mx; urgency=medium
+ .
+   * new desktop file
+Checksums-Sha1:
+ 26b1175a67ecec5cdf01a217acbae9c1ddb18f9a 701 mx-test-repo-installer_16.5mx15.dsc
+ 877471b08ac4da55b6be982214f17ffe2b3c13c7 213584 mx-test-repo-installer_16.5mx15.tar.xz
+ 9b9baa93bd5f258125dc32e87082823543a7e125 45892 mx-test-repo-installer_16.5mx15_i386.deb
+Checksums-Sha256:
+ d27794bbe7522c18bd7bdf4513d3d9ce67c9c9fd43810ad7f77eb53c0f57e107 701 mx-test-repo-installer_16.5mx15.dsc
+ 77ad14e6b856e7108f3a8d0be69103dc77779f53a98aad943bd34b8aedb8e4d7 213584 mx-test-repo-installer_16.5mx15.tar.xz
+ 7ff51e79e32356639fee9abafc8891824ecba81c4a14c9b8f0bb0c7f61fec5a3 45892 mx-test-repo-installer_16.5mx15_i386.deb
+Files:
+ d35911ded8e78e98b27f9423edaabea5 701 admin optional mx-test-repo-installer_16.5mx15.dsc
+ 251932aa39506b4db0d70bdeb72d9f71 213584 admin optional mx-test-repo-installer_16.5mx15.tar.xz
+ 705f4a0cccd301c7256e06936284a47f 45892 admin optional mx-test-repo-installer_16.5mx15_i386.deb

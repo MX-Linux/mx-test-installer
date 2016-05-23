@@ -1,3 +1,9 @@
+mx-test-repo-installer (16.5mx15) mx; urgency=medium
+
+  * new desktop file
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Mon, 23 May 2016 07:38:00 -0400
+
 mx-test-repo-installer (16.4mx15) mx; urgency=medium
 
   * Added translations
