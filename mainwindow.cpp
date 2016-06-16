@@ -122,7 +122,7 @@ void MainWindow::displayMXlist(QStringList mxlist)
         hashApp.insert(app_name, app_info);
         apps += app_name + " "; // all the apps
     }
-    QString info_installed = runCmd("apt-cache policy " + apps + "|grep Candidate -B2").str; // intalled app info
+    QString info_installed = runCmd("LC_ALL=en_US.UTF-8 apt-cache policy " + apps + "|grep Candidate -B2").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
     // create a hash of name and installed version
     foreach(item, app_info_list) {

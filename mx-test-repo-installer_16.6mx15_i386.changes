@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Thu, 16 Jun 2016 19:27:31 -0400
+Source: mx-test-repo-installer
+Binary: mx-test-repo-installer
+Architecture: i386
+Version: 16.6mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphin@gmail.com>
+Description:
+ mx-test-repo-installer - mx-test-repo-installer
+Changes:
+ mx-test-repo-installer (16.6mx15) mx; urgency=medium
+ .
+   * fix to app info dialog so non-english gets parsed correctly
+Checksums-Sha1:
+ 34368485a21ab3d1336973d33049422a30bc4c39 45964 mx-test-repo-installer_16.6mx15_i386.deb
+Checksums-Sha256:
+ ec365e22c42b99628e06fedae5580ea2583e0c83c3f464f2c86b95f25a4320c0 45964 mx-test-repo-installer_16.6mx15_i386.deb
+Files:
+ cef88b2477e433b1c14356dd50d9d89e 45964 admin optional mx-test-repo-installer_16.6mx15_i386.deb
