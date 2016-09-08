@@ -1,3 +1,9 @@
+mx-test-repo-installer (16.9mx15) mx; urgency=medium
+
+  * update package list faster
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 07 Sep 2016 21:42:47 -0400
+
 mx-test-repo-installer (16.6mx15) mx; urgency=medium
 
   * fix to app info dialog so non-english gets parsed correctly

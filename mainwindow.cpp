@@ -48,6 +48,7 @@ MainWindow::MainWindow(QWidget *parent) :
     searchBox = new QLineEdit(this);
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-repo-installer/icons/software-update-available.png")));
     this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-test-repo-installer/icons/application-x-deb.png")));
+    startProgressBar();
     runCmd("build-test-package-list.sh");
     start();
 }
@@ -97,7 +98,6 @@ QStringList MainWindow::readMXlist()
 // Dislpay available apps
 void MainWindow::displayMXlist(QStringList mxlist)
 {
-    QHash<QString, QString> hashApp; // hash that contains (app_name, app_info) for the mxlist
     QHash<QString, VersionNumber> hashInstalled; // hash that contains (app_name, VersionNumber) returned by apt-cache policy
     QHash<QString, VersionNumber> hashCandidate; //hash that contains (app_name, VersionNumber) returned by apt-cache policy for candidates
     QString app_name;
@@ -112,16 +112,26 @@ void MainWindow::displayMXlist(QStringList mxlist)
     QTreeWidgetItem *widget_item;
 
     //system("notify-send -i application-x-deb 'Test Repo Installer' 'List Packages'");
-    startProgressBar();
     ui->treeWidget->clear();
 
     // create a list of apps, create a hash with app_name, app_info
     foreach(item, mxlist) {
         app_name = item.section(" ", 0, 0);
         app_info = item.section(" ", 1, -1);
-        hashApp.insert(app_name, app_info);
         apps += app_name + " "; // all the apps
+        app_ver = app_info.section("  ", 0, 0).trimmed();
+        app_desc = app_info.section("  ", 1, -1);
+        widget_item = new QTreeWidgetItem(ui->treeWidget);
+        widget_item->setFlags(widget_item->flags());
+        widget_item->setCheckState(0, Qt::Unchecked);
+        widget_item->setText(2, app_name);
+        widget_item->setText(3, app_ver);
+        widget_item->setText(4, app_desc);
     }
+    for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
+        ui->treeWidget->resizeColumnToContents(i);
+    }
+    stopProgressBar();
     QString info_installed = runCmd("LC_ALL=en_US.UTF-8 apt-cache policy " + apps + "|grep Candidate -B2").str; // intalled app info
     app_info_list = info_installed.split("--"); // list of installed apps
     // create a hash of name and installed version
@@ -133,50 +143,41 @@ void MainWindow::displayMXlist(QStringList mxlist)
         hashInstalled.insert(app_name, installed);
         hashCandidate.insert(app_name, candidate);
     }
+
     // process the entire list of apps
-    foreach(item, mxlist) {
-        app_name = item.section(" ", 0, 0);
-        app_info = hashApp[app_name];
-        app_ver = app_info.section("  ", 0, 0).trimmed();
-        app_desc = app_info.section("  ", 1, -1);
+    QTreeWidgetItemIterator it(ui->treeWidget);
+    while (*it) {
+        widget_item = (*it);
+        app_name = widget_item->text(2);
+        app_ver = widget_item->text(3);
         installed = hashInstalled[app_name];
-        widget_item = new QTreeWidgetItem(ui->treeWidget);
-        widget_item->setFlags(widget_item->flags());
-        widget_item->setCheckState(0, Qt::Unchecked);
-        widget_item->setText(2, app_name);
-        widget_item->setText(3, app_ver);
-        widget_item->setText(4, app_desc);
         candidate = hashCandidate[app_name];
         //qDebug() << installed.toString();
         //qDebug() << candidate.toString();
         VersionNumber candidatetest = QString(app_ver);
         if (installed.toString() == "(none)") {
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-                widget_item->setToolTip(i, "Version " + candidate.toString() + " in stable repo" );
+                widget_item->setToolTip(i, tr("Version ") + candidate.toString() + tr(" in stable repo"));
             }
         } else if (installed.toString() == "") {
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-                widget_item->setToolTip(i, "Not available in stable repo" );
+                widget_item->setToolTip(i, tr("Not available in stable repo"));
             }
         } else {
             if (installed >= candidatetest) {
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
                     widget_item->setDisabled(true);
-                    widget_item->setToolTip(i, "Latest version " + installed.toString() + " already installed");
+                    widget_item->setToolTip(i, tr("Latest version ") + installed.toString() + tr(" already installed"));
                 }
             } else {
                 widget_item->setIcon(1, QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-repo-installer/icons/software-update-available.png")));
                 for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-                    widget_item->setToolTip(i, "Version " + installed.toString() + " installed");
+                    widget_item->setToolTip(i, tr("Version ") + installed.toString() + tr(" installed"));
                 }
             }
         }
+        ++it;
     }
-
-    for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
-        ui->treeWidget->resizeColumnToContents(i);
-    }
-    stopProgressBar();
 }
 
 // process keystrokes
