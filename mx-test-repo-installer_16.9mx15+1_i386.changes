@@ -18,20 +18,20 @@ Changes:
  .
    * added dpkg locking
 Checksums-Sha1:
- 6b1b51061e8f19a9b35011aa42751d8a0865cb47 46608 mx-test-repo-installer_16.9mx15+1_i386.deb
+ 49e67fcf6f5a1efe74dca2a9af7fab9c7c809a09 46684 mx-test-repo-installer_16.9mx15+1_i386.deb
 Checksums-Sha256:
- 82f519d053226f0897b83431cb2469d0d81d36eff4c744e35a866fb10990949e 46608 mx-test-repo-installer_16.9mx15+1_i386.deb
+ 8af56babf1e0e7d9b1d1d3c0a3fab370476ea0c0ffb60ed553add1f5864a4a6f 46684 mx-test-repo-installer_16.9mx15+1_i386.deb
 Files:
- 22696845263eb7a1edf827120605d840 46608 admin optional mx-test-repo-installer_16.9mx15+1_i386.deb
+ a19fd6b7158481652c0aac10b8efd40e 46684 admin optional mx-test-repo-installer_16.9mx15+1_i386.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJX2LcaAAoJEHCTjHgGee6Y12EH/1a6FcQtso5w9aM+Qc7g0CUl
-VhNSU0RNMkhKCOongmv5wOeOfq153PzyEykAuTrxiywt2YSsENivTffHfaKErdkN
-PwUszs8cMgfDkFxgeaPhNPahOn8Iu8TCWQZwjrkFB/aFVVJVbzvSjd8FCm74QfuP
-FzbrYiJXV7nZPvH5Y15lgWtzRafzPGRPvnJuafCdmifp0jGRkAv/DM9ms/ZulYWN
-c1t+GB3WqAGo2Cs7asWOGj1dtzsiqJcbWc7BQJUOHw2BnA0x/dj/Yx8JzniG+HTf
-vRhXhrd9OMAxtGjGVkJ7BX6sdr0D8BwL9+JtjMK3kFiU2EyrEOTX9Y1Zh82/rvg=
-=2zNh
+iQEcBAEBAgAGBQJX2XixAAoJEHCTjHgGee6Y9A0H/1i7QyeOpB/tT0/3kXfN0Lcb
+UiLpEdutxeRSs4DP5jRsmbhV9wtOl/nq34+zjT3B6Kcs0K0SwgOvdpDAWkVQZsi/
+JLEIYgplU0BjzCjNtrSJCMaSmGcG8jqg6LXGGsVeAKq0Yczp0UX7OS43s6Kl+/vi
+xpuDJerZv18Uk7mY0cD3uKYmLiJTCpQU6M1OKlGGeDketfeM96O0+rRly6UL2rn1
+d0NmCj9qN4+5b4tPS5SrPnc2mVSPCzt28IXuRmywyO94MFxSwBKfK36BxnLfSopL
+8bD/jI9w0SMjZmNUGBh8DnN8anmrx4Dp6nNez0v1a+Td58rryKIWQmx3iowrl3c=
+=qSjp
 -----END PGP SIGNATURE-----

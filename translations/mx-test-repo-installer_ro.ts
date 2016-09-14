@@ -172,7 +172,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="72"/>
+        <location filename="../main.cpp" line="73"/>
         <source>You must run this program as root.</source>
         <translation>Trebuie să rulați programul ca administrator.</translation>
     </message>

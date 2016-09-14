@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
         w.show();
 
         return a.exec();
+        lock_file.unlock();
 
     } else {
         QApplication::beep();
