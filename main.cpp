@@ -25,6 +25,8 @@
 
 
 #include "mainwindow.h"
+#include "lockfile.h"
+
 #include <QApplication>
 #include <unistd.h>
 #include <QApplication>
@@ -32,6 +34,9 @@
 #include <QLocale>
 #include <QIcon>
 #include <QMessageBox>
+
+#include <QDebug>
+
 
 int main(int argc, char *argv[])
 {
@@ -45,6 +50,16 @@ int main(int argc, char *argv[])
     appTran.load(QString("mx-test-repo-installer_") + QLocale::system().name(), "/usr/share/mx-test-repo-installer/locale");
     a.installTranslator(&appTran);
 
+    LockFile lock_file("/var/lib/dpkg/lock");
+    if (lock_file.isLocked()) {
+        QApplication::beep();
+        QMessageBox::critical(0, QApplication::tr("Unable to get exclusive lock"),
+                              QApplication::tr("Another package management application (like Synaptic or apt-get), "\
+                                               "is already running. Please close that application first"));
+        return 1;
+    } else {
+        lock_file.lock();
+    }
     if (getuid() == 0) {
         MainWindow w;
         w.show();

@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     versionnumber.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    lockfile.cpp
 
 HEADERS  += mainwindow.h \
-    versionnumber.h
+    versionnumber.h \
+    lockfile.h
 
 FORMS    += mainwindow.ui
 

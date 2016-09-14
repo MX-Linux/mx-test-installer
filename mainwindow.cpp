@@ -45,11 +45,13 @@ MainWindow::MainWindow(QWidget *parent) :
     this->show();
     version = getVersion("mx-test-repo-installer");
     qApp->processEvents();
-    searchBox = new QLineEdit(this);
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-repo-installer/icons/software-update-available.png")));
     this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-test-repo-installer/icons/application-x-deb.png")));
     startProgressBar();
     runCmd("build-test-package-list.sh");
+    connect(ui->searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
+    ui->searchBox->setFocus();
+    lock_file = new LockFile("/var/lib/dpkg/lock");
     start();
 }
 
@@ -143,7 +145,9 @@ void MainWindow::displayMXlist(QStringList mxlist)
         hashInstalled.insert(app_name, installed);
         hashCandidate.insert(app_name, candidate);
     }
-
+    for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
+        ui->treeWidget->resizeColumnToContents(i);
+    }
     // process the entire list of apps
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
@@ -152,8 +156,8 @@ void MainWindow::displayMXlist(QStringList mxlist)
         app_ver = widget_item->text(3);
         installed = hashInstalled[app_name];
         candidate = hashCandidate[app_name];
-        //qDebug() << installed.toString();
-        //qDebug() << candidate.toString();
+        //qDebug() << "installed: " << installed.toString();
+        //qDebug() << "candidate: " << candidate.toString();
         VersionNumber candidatetest = QString(app_ver);
         if (installed.toString() == "(none)") {
             for (int i = 0; i < ui->treeWidget->columnCount(); ++i) {
@@ -191,7 +195,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
 void MainWindow::closeSearch()
 {
-    searchBox->close();
+    ui->searchBox->clear();
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
         (*it)->setHidden(false);
@@ -202,17 +206,13 @@ void MainWindow::closeSearch()
 // search entered text starting with the first keystroke
 void MainWindow::search()
 {
-    searchBox = new QLineEdit(this);
-    searchBox->move(this->geometry().width() - 120,this->geometry().height() - 100);
-    searchBox->setFocus();
-    searchBox->show();
-    connect(searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));
+    ui->searchBox->setFocus();
 }
 
 // find packages
 void MainWindow::findPackage()
 {
-    QString word = searchBox->text();
+    QString word = ui->searchBox->text();
     QList<QTreeWidgetItem *> found_items = ui->treeWidget->findItems(word, Qt::MatchContains, 2);
     QTreeWidgetItemIterator it(ui->treeWidget);
     while (*it) {
@@ -255,7 +255,6 @@ void MainWindow::procTime()
     progress->setValue(progress->value() + 1);
 }
 
-
 void MainWindow::on_buttonCancel_clicked()
 {
     exit(0);
@@ -272,10 +271,12 @@ void MainWindow::on_buttonInstall_clicked()
         qDebug() << aptgetlist;
     }
     runCmd("echo deb http://main.mepis-deb.org/mx/testrepo/ mx15 test>/etc/apt/sources.list.d/mxtestrepotemp.list");
+    lock_file->unlock();
     runCmd("x-terminal-emulator -e apt-get update");
     runCmd("x-terminal-emulator -e apt-get install " + aptgetlist);
     runCmd("rm -f /etc/apt/sources.list.d/mxtestrepotemp.list");
     runCmd("x-terminal-emulator -e apt-get update");
+    lock_file->lock();
     changeset.clear();
     //qDebug() << changeset;
     closeSearch();

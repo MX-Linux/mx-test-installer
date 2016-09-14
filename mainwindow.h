@@ -26,11 +26,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <lockfile.h>
+
 #include <QTreeWidgetItem>
 #include <QTimer>
 #include <QProgressDialog>
 #include <QProgressBar>
 #include <QLineEdit>
+
 
 namespace Ui {
 class MainWindow;
@@ -54,10 +57,12 @@ public:
     QStringList changeset;
     QStringList readMXlist();
 
-    void displayMXlist(QStringList mxlist);    
+
+    void displayMXlist(QStringList mxlist);
     void start();
     void startProgressBar();
     void stopProgressBar();
+
     QString getVersion(QString name);
     Output runCmd(QString cmd);
 
@@ -72,12 +77,13 @@ private slots:
     void on_treeWidget_itemClicked(QTreeWidgetItem *item);
     void on_buttonHelp_clicked();
 
-private:            
+private:
+    LockFile *lock_file;
     QProgressDialog *progress;
     QTimer *timer;
-    QLineEdit *searchBox;
     Ui::MainWindow *ui;
     void keyPressEvent(QKeyEvent *event);
+
 };
 
 #endif // MAINWINDOW_H

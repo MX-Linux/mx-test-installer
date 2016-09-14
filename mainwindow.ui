@@ -229,19 +229,6 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="6">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>527</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
      <item row="3" column="1" colspan="6">
       <widget class="QTreeWidget" name="treeWidget">
        <column>
@@ -296,6 +283,29 @@
         <number>4</number>
        </property>
       </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QLineEdit" name="searchBox">
+       <property name="placeholderText">
+        <string>search</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>

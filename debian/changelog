@@ -1,3 +1,9 @@
+mx-test-repo-installer (16.9mx15+1) mx; urgency=medium
+
+  * added dpkg locking
+
+ -- Adrian <adrian@mxlinux.org>  Tue, 13 Sep 2016 22:26:55 -0400
+
 mx-test-repo-installer (16.9mx15) mx; urgency=medium
 
   * update package list faster
