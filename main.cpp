@@ -50,6 +50,7 @@ int main(int argc, char *argv[])
     appTran.load(QString("mx-test-repo-installer_") + QLocale::system().name(), "/usr/share/mx-test-repo-installer/locale");
     a.installTranslator(&appTran);
 
+    // Don't start app if Synaptic/apt-get is running, lock dpkg otherwise while the program runs
     LockFile lock_file("/var/lib/dpkg/lock");
     if (lock_file.isLocked()) {
         QApplication::beep();
@@ -60,6 +61,7 @@ int main(int argc, char *argv[])
     } else {
         lock_file.lock();
     }
+
     if (getuid() == 0) {
         MainWindow w;
         w.show();
