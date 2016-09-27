@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -89,38 +87,38 @@
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>search</source>
-        <translation type="unfinished"></translation>
+        <translation>busca</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="164"/>
         <location filename="../mainwindow.cpp" line="179"/>
         <source>Version </source>
-        <translation type="unfinished"></translation>
+        <translation>Versión</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="164"/>
         <source> in stable repo</source>
-        <translation type="unfinished"></translation>
+        <translation>en repo de estable</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="168"/>
         <source>Not available in stable repo</source>
-        <translation type="unfinished"></translation>
+        <translation>No disponible en repo de estable</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
         <source>Latest version </source>
-        <translation type="unfinished"></translation>
+        <translation>Versión más reciente</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
         <source> already installed</source>
-        <translation type="unfinished"></translation>
+        <translation>ya instalada</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="179"/>
         <source> installed</source>
-        <translation type="unfinished"></translation>
+        <translation>instalada</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="235"/>
@@ -162,17 +160,17 @@
 <context>
     <name>QApplication</name>
     <message>
-        <location filename="../main.cpp" line="56"/>
-        <source>Unable to get exclusive lock</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../main.cpp" line="57"/>
-        <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
-        <translation type="unfinished"></translation>
+        <source>Unable to get exclusive lock</source>
+        <translation>No se pudo obtener el bloqueo exclusivo</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="73"/>
+        <location filename="../main.cpp" line="58"/>
+        <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
+        <translation>Otra aplicación de manejo de paquetes (como Synaptic o apt-get) ya está ejecutándose. Por favor cierre dicha aplicación primero. </translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="75"/>
         <source>You must run this program as root.</source>
         <translation>Debe ejecutar este programa como root.</translation>
     </message>

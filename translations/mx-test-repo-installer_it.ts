@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="it" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -9,7 +7,7 @@
         <location filename="../mainwindow.cpp" line="314"/>
         <location filename="../mainwindow.cpp" line="321"/>
         <source>MX Test Repo Installer</source>
-        <translation>MX Installare dal Repo Test</translation>
+        <translation>MX Installa dal Repo Test</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="56"/>
@@ -89,38 +87,38 @@
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>search</source>
-        <translation type="unfinished"></translation>
+        <translation>cerca</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="164"/>
         <location filename="../mainwindow.cpp" line="179"/>
         <source>Version </source>
-        <translation type="unfinished"></translation>
+        <translation>Versione</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="164"/>
         <source> in stable repo</source>
-        <translation type="unfinished"></translation>
+        <translation>nel repo stabile</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="168"/>
         <source>Not available in stable repo</source>
-        <translation type="unfinished"></translation>
+        <translation>Non disponibile nel repo stabile</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
         <source>Latest version </source>
-        <translation type="unfinished"></translation>
+        <translation>Ultima versione</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
         <source> already installed</source>
-        <translation type="unfinished"></translation>
+        <translation>già installato</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="179"/>
         <source> installed</source>
-        <translation type="unfinished"></translation>
+        <translation>installato</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="235"/>
@@ -130,7 +128,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="306"/>
         <source>About MX Test Repo Installer</source>
-        <translation>Informazioni su MX Installare dal Repo Test</translation>
+        <translation>Informazioni su MX Installa dal Repo Test</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="307"/>
@@ -140,7 +138,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="308"/>
         <source>App for installing directly from MX Test Repo</source>
-        <translation>Applicazioni da installare direttamente da MX Installare dal Repo Test</translation>
+        <translation>Applicazioni da installare direttamente da MX Installa dal Repo Test</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="310"/>
@@ -162,17 +160,18 @@
 <context>
     <name>QApplication</name>
     <message>
-        <location filename="../main.cpp" line="56"/>
-        <source>Unable to get exclusive lock</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../main.cpp" line="57"/>
-        <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
-        <translation type="unfinished"></translation>
+        <source>Unable to get exclusive lock</source>
+        <translation>Non si riesce ad ottenere un blocco esclusivo</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="73"/>
+        <location filename="../main.cpp" line="58"/>
+        <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
+        <translation>Un altro gestore di pacchetti (come Synaptic o apt-get) è già in funzione.
+Prego, chiudi prima quell&apos;applicazione.</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="75"/>
         <source>You must run this program as root.</source>
         <translation>Devi eseguire questo programma come amministratore</translation>
     </message>
