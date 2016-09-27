@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Mon, 26 Sep 2016 21:16:20 -0400
+Source: mx-test-repo-installer
+Binary: mx-test-repo-installer
+Architecture: i386
+Version: 16.9+2mx15
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphin oracle <dolphinoracle@gmail.com>
+Description:
+ mx-test-repo-installer - mx-test-repo-installer
+Changes:
+ mx-test-repo-installer (16.9+2mx15) mx; urgency=medium
+ .
+   * new icon
+Checksums-Sha1:
+ 3afac4ba95873f7c7353c4a20b3bfe994db580b6 57516 mx-test-repo-installer_16.9+2mx15_i386.deb
+Checksums-Sha256:
+ 2c00aa3954e51e655c1ef82b61e749863c484a2f6335df4f88e45364aa3c9844 57516 mx-test-repo-installer_16.9+2mx15_i386.deb
+Files:
+ bc89a0cd1cd221146fb1297bf4d61f98 57516 admin optional mx-test-repo-installer_16.9+2mx15_i386.deb
