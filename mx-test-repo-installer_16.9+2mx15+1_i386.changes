@@ -1,0 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Tue, 27 Sep 2016 13:47:16 -0400
+Source: mx-test-repo-installer
+Binary: mx-test-repo-installer
+Architecture: i386
+Version: 16.9+2mx15+1
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-test-repo-installer - mx-test-repo-installer
+Changes:
+ mx-test-repo-installer (16.9+2mx15+1) mx; urgency=medium
+ .
+   * added new translations
+Checksums-Sha1:
+ d564d4c9bcff1981ebe98309c6fd617f0a6405af 59738 mx-test-repo-installer_16.9+2mx15+1_i386.deb
+Checksums-Sha256:
+ 6a9f68dc60c0332354a71e56ff78725b6a870c9a51a4fd3895429c97ec0eca52 59738 mx-test-repo-installer_16.9+2mx15+1_i386.deb
+Files:
+ 4c39068da193e15e78a07b3de7446232 59738 admin optional mx-test-repo-installer_16.9+2mx15+1_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJX6rGVAAoJEHCTjHgGee6YogoH+gItcgjnE+b98RsbNjr5KnQE
+GgcYr+8phFG8gesu3yIxhH2PExtxsMy7YiKDB2VljeySl337CRHKDoQaKyDcedYG
+RxEaUk9NlfAzRP9YAxahu24nHXOUgvg2rWhsdoNcT5G+b8zYP9wRaEAhKBjotMom
+811zgdVdA/3vTctuIwW1LHUPeajXyVOMNcT7lPZ+iAyI4Cd2POUusI6/djcKBixk
+cko++0hwiJHtIToAbkS2Ky7seymRvjwSOQ/21ULgHOshqaHauPGz9E+ORhth0Vh5
+5qID5jvgXp5Axhvv0d1wMQiC61xuG+FnOmL1A22aqybltpBWMEPomy0razQrA9w=
+=iT8s
+-----END PGP SIGNATURE-----

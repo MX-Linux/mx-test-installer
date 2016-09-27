@@ -5,7 +5,7 @@
  *
  * Authors: dolphin_oracle
  *          Adrian
- *          MX & MEPIS Community <http://forum.mepiscommunity.org>
+ *          MX & MEPIS Community <http://mxlinux.org>
  *
  * This file is part of mx-test-repo-installer
  *
