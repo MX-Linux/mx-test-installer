@@ -46,7 +46,7 @@ MainWindow::MainWindow(QWidget *parent) :
     version = getVersion("mx-test-repo-installer");
     qApp->processEvents();
     ui->icon->setIcon(QIcon::fromTheme("software-update-available", QIcon("/usr/share/mx-test-repo-installer/icons/software-update-available.png")));
-    this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-test-repo-installer/icons/application-x-deb.png")));
+    //this->setWindowIcon(QIcon::fromTheme("application-x-deb", QIcon("/usr/share/mx-test-repo-installer/icons/application-x-deb.png")));
     startProgressBar();
     runCmd("build-test-package-list.sh");
     connect(ui->searchBox,SIGNAL(textChanged(QString)),this, SLOT(findPackage()));

@@ -14,9 +14,8 @@
    <string>MX Test Repo Installer</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="application-x-deb">
-    <normaloff/>
-   </iconset>
+   <iconset>
+    <normaloff>../../../usr/share/pixmaps/tri.png</normaloff>../../../usr/share/pixmaps/tri.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>

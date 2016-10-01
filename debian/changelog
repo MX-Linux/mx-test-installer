@@ -1,3 +1,9 @@
+mx-test-repo-installer (16.10mx15) mx; urgency=medium
+
+  * fixed tasklist icon
+
+ -- dolphin <dolphinoracle@gmail.com>  Sat, 01 Oct 2016 13:08:00 -0400
+
 mx-test-repo-installer (16.9+2mx15+1) mx; urgency=medium
 
   * added new translations
