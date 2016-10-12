@@ -5,7 +5,7 @@
  *
  * Authors: dolphin_oracle
  *          Adrian
- *          MX & MEPIS Community <http://mxlinux.org>
+ *          MX Linux <http://mxlinux.org>
  *
  * This file is part of mx-test-repo-installer
  *
@@ -318,6 +318,6 @@ void MainWindow::on_buttonAbout_clicked()
 
 void MainWindow::on_buttonHelp_clicked()
 {
-    QString cmd = QString("mx-viewer http://www.mepiscommunity.org/wiki/help-files/help-mx-test-repo-installer '%1'").arg(tr("MX Test Repo Installer"));
+    QString cmd = QString("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-test-repo-installer '%1'").arg(tr("MX Test Repo Installer"));
         system(cmd.toUtf8());
 }
