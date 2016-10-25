@@ -36,7 +36,7 @@ declare -a packagedescrip
 
 packagename=(`cat $DIR/Packages |grep Package: |cut -d " " -f2`)
 packageversion=(`cat $DIR/Packages |grep -v Python-Version|grep -v Gstreamer-Version|grep Version: |cut -d " " -f2`)
-packagedescrip=(`cat $DIR/Packages |grep Description: |cut -d ":" -f2`)
+packagedescrip=(`cat $DIR/Packages |grep -v Npp-Description|grep Description: |cut -d ":" -f2`)
 
 count=$(echo ${#packagename[@]})
 echo $count Packages
