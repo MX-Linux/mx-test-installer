@@ -4,7 +4,7 @@ DIR=/tmp/mx-test-repo-installer
 
 # get package list based on architecture
 
-if [ -f /tmp/mx-test-repo-installer/packagelist.txt ]; then
+if [ -f $DIR/packagelist.txt ]; then
 	rm -f $DIR/packagelist.txt
 fi
 
@@ -34,9 +34,9 @@ declare -a packagename
 declare -a packageversion
 declare -a packagedescrip
 
-packagename=(`cat $DIR/Packages |grep Package: |cut -d " " -f2`)
-packageversion=(`cat $DIR/Packages |grep -v Python-Version|grep -v Gstreamer-Version|grep Version: |cut -d " " -f2`)
-packagedescrip=(`cat $DIR/Packages |grep -v Npp-Description|grep Description: |cut -d ":" -f2`)
+packagename=(`cat $DIR/Packages |awk '/Package:/ && !/-Package/'|cut -d " " -f2`)
+packageversion=(`cat $DIR/Packages |awk '/Version:/ && !/-Version:/'|cut -d " " -f2`)
+packagedescrip=(`cat $DIR/Packages |awk '/Description:/ && !/-Description:/'|cut -d ":" -f2`)
 
 count=$(echo ${#packagename[@]})
 echo $count Packages
