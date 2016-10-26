@@ -1,8 +1,8 @@
 mx-test-repo-installer (16.10+2mx16) mx; urgency=medium
 
-  * Changed URLs 
+  * updated build list script 
 
- --  dolphin <dolphinoracle@gmail.com>  Tues, 25 Oct 2016 19:22:57 -0400
+ --  dolphin <dolphinoracle@gmail.com>  Tue, 25 Oct 2016 19:22:57 -0400
 
 mx-test-repo-installer (16.10+1mx16) mx; urgency=medium
 
