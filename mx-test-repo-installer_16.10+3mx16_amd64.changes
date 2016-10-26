@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 25 Oct 2016 22:15:10 -0400
+Source: mx-test-repo-installer
+Binary: mx-test-repo-installer
+Architecture: source amd64
+Version: 16.10+3mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphin_oracle <dolphinoracle@gmail.com>
+Description:
+ mx-test-repo-installer - mx-test-repo-installer
+Changes:
+ mx-test-repo-installer (16.10+3mx16) mx; urgency=medium
+ .
+   * new filters for packagelist builder script.
+Checksums-Sha1:
+ 8eb839cfa3a34c89a323e34924c74a45a80d24b2 710 mx-test-repo-installer_16.10+3mx16.dsc
+ d5d5bb0309e29fde1c2dd076df5cc21cf9955167 43560 mx-test-repo-installer_16.10+3mx16.tar.xz
+ 7fe03948539e76b8427f4c384047b87493f8948b 58452 mx-test-repo-installer_16.10+3mx16_amd64.deb
+Checksums-Sha256:
+ 0c4033572f679399aa46706aa88b850a314839e4ce57f7dc136eeeaa5ccc610f 710 mx-test-repo-installer_16.10+3mx16.dsc
+ cd43bd5343d8e374a552e384adf749add617ddb4b3f36698ed10ece97bb427fc 43560 mx-test-repo-installer_16.10+3mx16.tar.xz
+ e9fe0ca3cade1e9d30f43339988aff0083d056fcb510e214bfdd52d474762c77 58452 mx-test-repo-installer_16.10+3mx16_amd64.deb
+Files:
+ 65f4a1eafc9f5c94bbd495b044fec7fa 710 admin optional mx-test-repo-installer_16.10+3mx16.dsc
+ f25f0a64d1a45dda13a0794da5d1cfbd 43560 admin optional mx-test-repo-installer_16.10+3mx16.tar.xz
+ aed6a10fbbe6769bb262834d98211058 58452 admin optional mx-test-repo-installer_16.10+3mx16_amd64.deb
