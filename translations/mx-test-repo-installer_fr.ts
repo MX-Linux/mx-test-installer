@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -125,12 +123,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="235"/>
         <source>Please wait till the database is loaded.</source>
-        <translation>Veuillez attendre jusqu&apos;à ce que la base de données est chargée.</translation>
+        <translation>Veuillez attendre jusqu&apos;à ce que la base de données soit chargée.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="306"/>
         <source>About MX Test Repo Installer</source>
-        <translation>À propos de MX Installateur des paquets du dépôt de test</translation>
+        <translation>À propos de l&apos;Installateur MX des paquets  du dépôt de test</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="307"/>
@@ -140,7 +138,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="308"/>
         <source>App for installing directly from MX Test Repo</source>
-        <translation>Application qui sert à installer directement du dépôt de test MX</translation>
+        <translation>Application qui sert à installer directement depuis le dépôt de test MX</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="310"/>
@@ -164,17 +162,17 @@
     <message>
         <location filename="../main.cpp" line="57"/>
         <source>Unable to get exclusive lock</source>
-        <translation>Peut pas obtenir le verrou exclusif</translation>
+        <translation>Impossible obtenir le verrou exclusif</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
-        <translation>Une autre application qui sert à gérer les paquets (comme Synaptic ou apt-get) est déjà en train d&apos;exécution. Il faut terminer d&apos;abord cette application.</translation>
+        <translation>Une autre application qui sert à gérer les paquets (comme Synaptic ou apt-get) est déjà en train d&apos;exécution. Il faut fermer d&apos;abord cette application.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>
         <source>You must run this program as root.</source>
-        <translation>Vous devez lancer cette application avec les droits root.</translation>
+        <translation>Vous devez lancer cette application avec les droits administrateur.</translation>
     </message>
 </context>
 </TS>

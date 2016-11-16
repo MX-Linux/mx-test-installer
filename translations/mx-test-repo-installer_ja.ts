@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ja" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -100,7 +98,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="164"/>
         <source> in stable repo</source>
-        <translation type="unfinished"></translation>
+        <translation>標準リポジトリ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="168"/>
@@ -164,12 +162,12 @@
     <message>
         <location filename="../main.cpp" line="57"/>
         <source>Unable to get exclusive lock</source>
-        <translation type="unfinished"></translation>
+        <translation>排他ロックを取得できません</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
-        <translation type="unfinished"></translation>
+        <translation>別のパッケージ管理アプリケーション (Synaptic や apt-get) がすでに実行されています。まずそのアプリケーションを閉じてください</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>

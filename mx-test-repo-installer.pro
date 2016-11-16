@@ -32,6 +32,8 @@ TRANSLATIONS += translations/mx-test-repo-installer_ca.ts \
                 translations/mx-test-repo-installer_ja.ts \
                 translations/mx-test-repo-installer_nl.ts \
                 translations/mx-test-repo-installer_pl.ts \
+                translations/mx-test-repo-installer_pt.ts \
                 translations/mx-test-repo-installer_ro.ts \
                 translations/mx-test-repo-installer_ru.ts \
-                translations/mx-test-repo-installer_sv.ts
+                translations/mx-test-repo-installer_sv.ts \
+                translations/mx-test-repo-installer_tr.ts
