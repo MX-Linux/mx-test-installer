@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Wed, 16 Nov 2016 13:45:46 -0500
+Source: mx-test-repo-installer
+Binary: mx-test-repo-installer
+Architecture: source amd64
+Version: 16.11mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-test-repo-installer - mx-test-repo-installer
+Changes:
+ mx-test-repo-installer (16.11mx16) mx; urgency=medium
+ .
+   * new translations
+Checksums-Sha1:
+ ece3fee3c446393a8754990acd454513262e0df3 1223 mx-test-repo-installer_16.11mx16.dsc
+ bdaac75ceade414f219fd1a03288e731c7273683 38272 mx-test-repo-installer_16.11mx16.tar.xz
+ 00a2fdeac5657db90bfccd2674daab0c055242e8 60016 mx-test-repo-installer_16.11mx16_amd64.deb
+Checksums-Sha256:
+ c7534280cadd44b1a5022134d978f3fec28b7744fff54c7a725abd60bc704b56 1223 mx-test-repo-installer_16.11mx16.dsc
+ a06ac562f4372dd34219d22f3e9a671dbc01608d274e1096cba44942aae5a95d 38272 mx-test-repo-installer_16.11mx16.tar.xz
+ 8bf0c8dee1eb4cf2a09035db1f1448f5598709a11607516b8ffcdd3743197d25 60016 mx-test-repo-installer_16.11mx16_amd64.deb
+Files:
+ 502a8bb08e65565c2a40166676097f58 1223 admin optional mx-test-repo-installer_16.11mx16.dsc
+ ba095afa21a594047793403bb9cc7d8f 38272 admin optional mx-test-repo-installer_16.11mx16.tar.xz
+ 201f0ca408067d8780eccc61be668279 60016 admin optional mx-test-repo-installer_16.11mx16_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJYLKm3AAoJEHCTjHgGee6YbGAIALKwouetcyg8A2EjsXHBKX51
+A1O82E5kWzWGTheUnDjP+1LHckUhZo0sezFGluA+s8ehGpSlaLOGuytsO41doHn0
+j8kzE5uEUPYeGcGa3miGROlCkQBaRnBRwRVl6OYmmGiPcEw8oCI7VgMSka6RWj7C
+8Kt8QQMCVwdeKuu9meykHtZkVjjqRZtcxk+a/EadCfca9N3kIo5yFUQo6TZX3X43
+vjMCWd+cDUhU6+LDXiudv5yFkqvi/Ie5AMYUPcffVD2f7DjfH3jYm7IW6fY66hZD
+IHTSTheszTCmikpYrmI/QBYklA3TwiXPFPUMgqgHAkodD08C3K+f/QaWwhwnGnA=
+=mqg4
+-----END PGP SIGNATURE-----

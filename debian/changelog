@@ -1,3 +1,9 @@
+mx-test-repo-installer (16.11mx16) mx; urgency=medium
+
+  * new translations 
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 16 Nov 2016 13:45:46 -0500
+
 mx-test-repo-installer (16.10+3mx16) mx; urgency=medium
 
   * new filters for packagelist builder script.
