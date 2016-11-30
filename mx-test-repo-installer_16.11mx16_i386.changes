@@ -2,7 +2,7 @@
 Hash: SHA1
 
 Format: 1.8
-Date: Wed, 16 Nov 2016 13:45:46 -0500
+Date: Wed, 30 Nov 2016 12:49:58 -0500
 Source: mx-test-repo-installer
 Binary: mx-test-repo-installer
 Architecture: i386
@@ -16,22 +16,22 @@ Description:
 Changes:
  mx-test-repo-installer (16.11mx16) mx; urgency=medium
  .
-   * new translations
+   * FR translation
 Checksums-Sha1:
- 82e768f11e1a9951b2333d74c2d53cb472c04a9f 60884 mx-test-repo-installer_16.11mx16_i386.deb
+ 4252bffb737364ecaf67f274f6b3c8e31e9b893e 60834 mx-test-repo-installer_16.11mx16_i386.deb
 Checksums-Sha256:
- 5bea9b53732ea2328b281f07bacefaa94e61ad6f61b92c2f66707c8983d7d41b 60884 mx-test-repo-installer_16.11mx16_i386.deb
+ e51e5fecf377b802b647c4e2802af68647515455de692dfeac3adc63c2cdba1b 60834 mx-test-repo-installer_16.11mx16_i386.deb
 Files:
- a66d321a54d3f4e48f297894e8e3bb80 60884 admin optional mx-test-repo-installer_16.11mx16_i386.deb
+ da2c9fc14fca2374c1818d7d39b27e10 60834 admin optional mx-test-repo-installer_16.11mx16_i386.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJYLKnZAAoJEHCTjHgGee6YLawIALlOiVEVdezZfr5i+KkDj6K6
-dZNN5EUaFifPjTSg6NrYNKMqR1dUg5QTxLFx06vns1zaF447GW6B+G9Nr9dPbWBA
-Ric/OwOfzDyPPwoI3s2SkmdYjVUNXzyIBq+K9SwTEJJhgDO+dLl8UCZbM3QhPNUw
-oDDB6cH4zQHsHS2AFlunqro5PW03vwhCGmxk/dviFQyRksQlzQ8Dig+Ccx93kp/v
-aWMGzP+sdtmUKfWJ/AKeq3co8vKpkmcr3odPlwhd3dkGn2HZrzXET8pvyFNRUj/U
-rlecHuT5Kz2XtyT3A5vs/M/gKlTay3tfT0Kii7Dj9iu9KZh3clPums3cZNS9qdI=
-=yudL
+iQEcBAEBAgAGBQJYPxJHAAoJEHCTjHgGee6Yh24H/1YW6ek8jHOKloQ+Yq3M57ds
+trkVcZsXCNuUUWqfKgtyqE3f/wuXNm4NRYi/TR21YTkoqttVrm3Mjf+DTWPCGxwx
+PksjONxQ4WeC7z9+fn2r5Z+mtrK6wCmb131hhhUHYD4LjBs9igXgHWyeCEwFeO5l
+36WwqNfjCvBByIeT10q7CTbpyeXpalXqgmN8bA4F4iLgk6hPdg1q0zKnhDIvjEuj
+FJw2cG5MXQZpdQ7LHCdCWPKcNZ+q2aGQM5QboCl4mDAWYNzAXY3fae6X9YwdfS3R
+02jn6fRZhw7eEUzb3DpKoXGfr/s6mBHyKKn1s9YQUZjlBrGg83b48T2QjDHEc9Y=
+=o0/N
 -----END PGP SIGNATURE-----
