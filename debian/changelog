@@ -1,8 +1,8 @@
-mx-test-repo-installer (16.11mx16) mx; urgency=medium
+mx-test-repo-installer (16.11mx16+1) mx; urgency=medium
 
-  * FR translation
+  * new translations
 
- -- Adrian <adrian@mxlinux.org>  Wed, 30 Nov 2016 12:49:58 -0500
+ -- Adrian <adrian@mxlinux.org>  Wed, 30 Nov 2016 21:09:33 -0500
 
 mx-test-repo-installer (16.11mx16) mx; urgency=medium
 
