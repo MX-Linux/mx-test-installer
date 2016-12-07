@@ -1,3 +1,9 @@
+mx-test-repo-installer (16.12mx16) mx; urgency=medium
+
+  * revised to handle mx16 test repo, if running on mx16
+
+ -- Adrian <adrian@mxlinux.org>  Tue, 06 Dec 2016 22:09:33 -0500
+
 mx-test-repo-installer (16.11mx16+1) mx; urgency=medium
 
   * new translations
