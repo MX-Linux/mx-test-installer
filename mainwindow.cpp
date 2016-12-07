@@ -94,6 +94,7 @@ QStringList MainWindow::readMXlist()
     QStringList mxlist;
     file_content = runCmd("cat /tmp/mx-test-repo-installer/packagelist.txt").str;
     mxlist = file_content.split("\n");
+    mxlist.removeDuplicates();
     return mxlist;
 }
 
@@ -270,7 +271,11 @@ void MainWindow::on_buttonInstall_clicked()
         aptgetlist = QString(aptgetlist + " " + listing);
         qDebug() << aptgetlist;
     }
-    runCmd("echo deb http://main.mepis-deb.org/mx/testrepo/ mx15 test>/etc/apt/sources.list.d/mxtestrepotemp.list");
+    runCmd("echo deb http://main.mepis-deb.org/mx/testrepo/ mx15 test>>/etc/apt/sources.list.d/mxtestrepotemp.list");
+    //enable mx16 repo if necessary
+    if (system("cat /etc/apt/sources.list.d/*.list |grep -q mx16") == 0) {
+        runCmd("echo deb http://main.mepis-deb.org/mx/testrepo/ mx16 test>>/etc/apt/sources.list.d/mxtestrepotemp.list");
+    }
     lock_file->unlock();
     runCmd("x-terminal-emulator -e apt-get update");
     runCmd("x-terminal-emulator -e apt-get install " + aptgetlist);
