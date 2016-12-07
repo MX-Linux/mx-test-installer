@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 06 Dec 2016 22:09:33 -0500
+Source: mx-test-repo-installer
+Binary: mx-test-repo-installer
+Architecture: source amd64
+Version: 16.12mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-test-repo-installer - mx-test-repo-installer
+Changes:
+ mx-test-repo-installer (16.12mx16) mx; urgency=medium
+ .
+   * revised to handle mx16 test repo, if running on mx16
+Checksums-Sha1:
+ 0de6c59712ffff660b2f835d5d7ce06b106dec58 702 mx-test-repo-installer_16.12mx16.dsc
+ a78a1f4e50a2cc3cd3d8767c3ee9f4c18381a8b8 40244 mx-test-repo-installer_16.12mx16.tar.xz
+ ef2a9cb5a65322101b0698c7e495930d4bd88482 60278 mx-test-repo-installer_16.12mx16_amd64.deb
+Checksums-Sha256:
+ 002a9d19d40c4025962b4aa2415dbe1ed817bc71f73f4bf31ca1e0220a8b1ee9 702 mx-test-repo-installer_16.12mx16.dsc
+ d2d3d25bc1c9304735d93cab73c4ea254d2ff1ac01bd66a54fa179a1cf7e32c1 40244 mx-test-repo-installer_16.12mx16.tar.xz
+ 491b8ef2b7c5a979c9603a8d513b4f86f1033002302ad80d293928ae2b1cf81d 60278 mx-test-repo-installer_16.12mx16_amd64.deb
+Files:
+ 2cbff894fa5e628f638b4fa29023c907 702 admin optional mx-test-repo-installer_16.12mx16.dsc
+ 06b5759b56c2e90f2539d6af5bc34489 40244 admin optional mx-test-repo-installer_16.12mx16.tar.xz
+ cd78011b398e164b4ebb3fcae44a89ed 60278 admin optional mx-test-repo-installer_16.12mx16_amd64.deb
