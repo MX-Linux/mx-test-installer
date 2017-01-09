@@ -1,3 +1,9 @@
+mx-test-repo-installer (17.1mx16) mx; urgency=medium
+
+  * changed the displayed name to clarify its purpose
+
+ -- Adrian <adrian@mxlinux.org>  Mon, 09 Jan 2017 17:15:37 -0500
+
 mx-test-repo-installer (16.11mx16+1) mx; urgency=medium
 
   * new translations
