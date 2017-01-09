@@ -14,16 +14,35 @@ if [ -d $DIR ]; then
 	mkdir -p $DIR
 fi
 
+#check mx16 repo
+
+cat /etc/apt/sources.list.d/*.list |grep -q mx16
+test=$?
+echo "$test"
+	
 arch=$(dpkg --print-architecture)
 
-if [ "$arch" = "i386" ]; then
-	wget http://mxrepo.com/mx/testrepo/dists/mx15/test/binary-i386/Packages.gz -O $DIR/Packages.gz
-else
-	wget http://mxrepo.com/mx/testrepo/dists/mx15/test/binary-amd64/Packages.gz -O $DIR/Packages.gz
-fi
+if [ "$test" = "0" ]; then
+	if [ "$arch" = "i386" ]; then
+		wget http://mxrepo.com/mx/testrepo/dists/mx15/test/binary-i386/Packages.gz -O $DIR/mx15Packages.gz
+		wget http://mxrepo.com/mx/testrepo/dists/mx16/test/binary-i386/Packages.gz -O $DIR/mx16Packages.gz
+	else
+		wget http://mxrepo.com/mx/testrepo/dists/mx15/test/binary-amd64/Packages.gz -O $DIR/mx15Packages.gz
+		wget http://mxrepo.com/mx/testrepo/dists/mx16/test/binary-amd64/Packages.gz -O $DIR/mx16Packages.gz
+	fi
+	#unpack Packages.gz
+	gzip -df $DIR/mx15Packages.gz
+	gzip -df $DIR/mx16Packages.gz 
 
-#unpack Packages.gz
-gzip -df $DIR/Packages.gz 
+else
+	if [ "$arch" = "i386" ]; then
+		wget http://mxrepo.com/mx/testrepo/dists/mx15/test/binary-i386/Packages.gz -O $DIR/mx15Packages.gz
+	else
+		wget http://mxrepo.com/mx/testrepo/dists/mx15/test/binary-amd64/Packages.gz -O $DIR/mx15Packages.gz
+	fi
+	#unpack Packages.gz
+	gzip -df $DIR/mx15Packages.gz 
+fi
 
 
 #build short package description file
@@ -34,9 +53,9 @@ declare -a packagename
 declare -a packageversion
 declare -a packagedescrip
 
-packagename=(`cat $DIR/Packages |awk '/Package:/ && !/-Package/'|cut -d " " -f2`)
-packageversion=(`cat $DIR/Packages |awk '/Version:/ && !/-Version:/'|cut -d " " -f2`)
-packagedescrip=(`cat $DIR/Packages |awk '/Description:/ && !/-Description:/'|cut -d ":" -f2`)
+packagename=(`cat $DIR/*Packages |awk '/Package:/ && !/-Package/'|cut -d " " -f2`)
+packageversion=(`cat $DIR/*Packages |awk '/Version:/ && !/-Version:/'|cut -d " " -f2`)
+packagedescrip=(`cat $DIR/*Packages |awk '/Description:/ && !/-Description:/'|cut -d ":" -f2`)
 
 count=$(echo ${#packagename[@]})
 echo $count Packages
@@ -48,5 +67,5 @@ do
 	i=$[$i+1]
 done
 
-rm -f $DIR/Packages.gz
-rm -f $DIR/Packages
+rm -f $DIR/*Packages.gz
+rm -f $DIR/*Packages

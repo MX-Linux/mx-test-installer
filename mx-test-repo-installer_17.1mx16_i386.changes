@@ -18,20 +18,20 @@ Changes:
  .
    * changed the displayed name to clarify its purpose
 Checksums-Sha1:
- c91a5f137a655022c31b2c4341cb11d185fecce3 60952 mx-test-repo-installer_17.1mx16_i386.deb
+ 7df068e44c86c2ce7080febad88c1b838258acec 61252 mx-test-repo-installer_17.1mx16_i386.deb
 Checksums-Sha256:
- f8d7a64c2089fffcdf53cdc8cecb63b145cdf81447751c1f3a264c2e185e96c2 60952 mx-test-repo-installer_17.1mx16_i386.deb
+ 6973cf7a757474fc14f1bf027a2e3048154acee799120c03b15a0c458d2b876c 61252 mx-test-repo-installer_17.1mx16_i386.deb
 Files:
- 71ada96d7e034107769c9f3422224f3b 60952 admin optional mx-test-repo-installer_17.1mx16_i386.deb
+ 8b4690323e0649c6c67014a74301c515 61252 admin optional mx-test-repo-installer_17.1mx16_i386.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJYdAzEAAoJEHCTjHgGee6YCM0IAKUEdXcnH0ADl/WTC7uaUXHd
-fptJC/VrCThyLgByLEVopfDrISuw9H3Z4d7slOr+carmaP1y7coOXjd8clLesrfB
-NRUxUx+fFz3RMNa+bB70Z15O4vdWHSZqFcGqumvgUjxy2NXqQVri/bUkSuxtunPC
-aTcIbHotq9I2dw3uaUN6rnxe2grig6SKcnIUBakzPqhm4v21LaMahLWwUKcUCopi
-vnXYWGd7TGtprL6zjuaNxqe6KkNp9m5SRxiTDmtjjYAxkxGq602iuvEznTVksvyF
-lbe9eV+k97D4O1AFh2bYuqbNNZgKzlb+/KW4ikDKZNY1fjY/iewT5Jk5yTLu4cU=
-=1TYu
+iQEcBAEBAgAGBQJYdA2jAAoJEHCTjHgGee6YflcH/jgEBenxjBDFtgAD3an9Zmi7
+Rv0LwAaT2/veFGUP3H0kGLEDymlEJZvgdqgYbbPu3gFlR6N0panyUgkgiDs4ihTV
+KjWLIeodFmS5zGOCp5i18KG5BrUZeiAT+icFhXMGAYyVGW6V8zMYSZRD9BXTMP3y
+hbUlHInzwmgoh3dtB4tIB4Coz0gNcxO5UNujeQ4HPNqW/ifj+xdriIfYSirCYDca
+Fem+m0gWXR6j/49At1bpJoii/DVOezvQAWbN3bj71xm93XmwZy0PuZTlXgG55kqu
+7PCoUpV2ctG45hmn8mvkyJtADE9BD29mogQJ9xmu+kp1cI9nTKKHvCj5tq4g7XI=
+=wa6Z
 -----END PGP SIGNATURE-----
