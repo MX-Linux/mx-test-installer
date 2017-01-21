@@ -1,17 +1,17 @@
 [Desktop Entry]
 Version=1.0
 Name=MX Install from Test Repo
-Name[ca]=MX Test Repo Installer
-Name[de]=MX Test Repo Installer
-Name[el]=MX Test Repo Installer
-Name[es]=MX Instalador del repositorio de pruebas
-Name[fr]=MX Installateur des paquets du dépôt de test
+Name[ca]=MX Install from Test Repo
+Name[de]=MX Installieren aus dem Test Repo
+Name[el]=MX Install from Test Repo
+Name[es]=MX Instalar del Test Repo
+Name[fr]=MX Installateur depuis le dépôt de Test
 Name[it]=MX Installare dal Repo Test
-Name[ja]=MX テストリポジトリインストーラ
-Name[nl]=MX Test Pakketbron Installeerder
-Name[pt]=MX_Instalador do Repositório “Teste”
+Name[ja]=MX テストリポジトリからのインストール
+Name[nl]=MX Installeer uit Test Pakketbron
+Name[pt]=MX_Instalar Pacotes do Repositório "Teste"
 Name[ru]=MX Установщик тестового репозитория
-Name[sv]=MX Test Repo Installerare
+Name[sv]=MX Installera från Test Repo
 Comment=Install apps directly from MX Test Repository
 Comment[ca]=Instal·lar directament des del dipòsit MX Test 
 Comment[de]=Installiere Apps direkt aus der MX Test Repository
