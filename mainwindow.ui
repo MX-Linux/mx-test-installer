@@ -255,6 +255,16 @@
          <string>Description</string>
         </property>
        </column>
+       <column>
+        <property name="text">
+         <string notr="true">Status</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Displayed</string>
+        </property>
+       </column>
       </widget>
      </item>
      <item row="1" column="2">
@@ -273,7 +283,7 @@
      <item row="2" column="1" colspan="4">
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Greyed out items have already been installed.</string>
+        <string>Disabled items (listed in blue) have already been installed.</string>
        </property>
        <property name="margin">
         <number>0</number>
@@ -305,6 +315,39 @@
         </size>
        </property>
       </spacer>
+     </item>
+     <item row="1" column="6">
+      <widget class="QComboBox" name="comboFilter">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter packages according to their status.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="currentText">
+        <string>All packages</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>All packages</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Installed</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Upgradable</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Not installed</string>
+        </property>
+       </item>
+      </widget>
      </item>
     </layout>
    </item>
