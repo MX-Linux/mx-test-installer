@@ -18,20 +18,20 @@ Changes:
  .
    * added filter
 Checksums-Sha1:
- 0d0b4825ba78b1a83d111a9b495a6398aba4193f 64434 mx-test-repo-installer_17.2mx16_i386.deb
+ 2230d71a9075155d4db142c0d343d3a3e509fc14 64658 mx-test-repo-installer_17.2mx16_i386.deb
 Checksums-Sha256:
- 4091c4df011302a53ec1906637c10febc63f4b14089d539d12918099e5f8a60a 64434 mx-test-repo-installer_17.2mx16_i386.deb
+ a17d676f98df8834665949f511c28160d2640a871f72b2330c1e8a3eeb7bfbdc 64658 mx-test-repo-installer_17.2mx16_i386.deb
 Files:
- 5eefe645964e76802b34293a41097c32 64434 admin optional mx-test-repo-installer_17.2mx16_i386.deb
+ 63232d6ddd909632e9172b9415a834b6 64658 admin optional mx-test-repo-installer_17.2mx16_i386.deb
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJYs2q5AAoJEHCTjHgGee6Yw5sH/1KXu+nNcqBtXxiv77xhEGsu
-4SPgHRCOfOlBNIqsMi6sSvKqYZsqDmRYR5eFXaBKofSW+JaCpzdXsRuzOBB56I0+
-bKuE6zb9KnWKHpwVJHbYwrciir+6ACdjhFFkx/jfUg58zRaebKxwwuxsJKJe/Eoe
-tBPLwVnacrPiLecggMG8OdfhOlAT9MFF2osEvLy/9lNmuSh4/h+AUboFvG8kkOjN
-dnCTMP54tYz710Ft795RZcgkKUqOmx2QWnRmHA+NT0Jw/7DUFhrC3DSHR7BFhzqn
-hItQU/lSkBoPmYTSkKkGLBUHGOtj6tbs3IFgeBugqs7SEziPD1wMKUYw4yojBKs=
-=G3Ga
+iQEcBAEBAgAGBQJYtX/CAAoJEHCTjHgGee6YhwoIAMsdewvRHLyfzFB4APzU2+14
+Hfa8+zGI9Zumf+wKlSBeqXd88Ro0l0/7QzxZTZrwVB5PWBs0etPGDrJd1GrkYXD6
+JzxSH8t2UcXm/BHVLEUY4B9jMVf4nstt7JfHq4svRMgdyq88Sl9XcaQFmBA0YHKp
+yREQq6z3aXuV56DnDg31Dg2ivnxNTvP7Go+AAi9bx49qWiE+MdwcTGMdywyYE9e/
+icBGUmJO+oWVk1u0YxRYC1o1msR/sPg4NS4a4Z9ASfxEfAVPY8eJkmMNSUnoZMzZ
+sSO8T4IavbauOi+jF4KAtiRq9CCsjHlOJ1CN/jIPO0KlwMqeKsShSlbcn4MQ8eA=
+=Koam
 -----END PGP SIGNATURE-----

@@ -13,20 +13,20 @@ Build-Depends: qt5-qmake, debhelper (>= 7.0.50~)
 Package-List:
  mx-test-repo-installer deb admin optional arch=any
 Checksums-Sha1:
- 95a7b7448b84e47411aedb5509332be29b731703 80824 mx-test-repo-installer_17.2mx16.tar.xz
+ 3a53f2bccc4d9e3ab7f8d31478333be98d6d8914 74936 mx-test-repo-installer_17.2mx16.tar.xz
 Checksums-Sha256:
- db285a279752f256eaa677e93f7572857073853cc9c32243fa4574fb5626b2f6 80824 mx-test-repo-installer_17.2mx16.tar.xz
+ b765a2829b018f8b83eaaefb17838343de842ed271cfbc3b45aa8ba981cfa71c 74936 mx-test-repo-installer_17.2mx16.tar.xz
 Files:
- 78479eb3a05d61c572cb9d41f17b5d49 80824 mx-test-repo-installer_17.2mx16.tar.xz
+ 7058c3f7608999596c3f3ace32821a2a 74936 mx-test-repo-installer_17.2mx16.tar.xz
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJYszUPAAoJEHCTjHgGee6Y16UH/0LF+JmWhlkiEcB6fBvx2DjI
-ppQ4SbvsUwZ+tgEcfXN70HpMEMNSO71LAzD3mIK0EzuOUAgOPbQ3F8HTHNTrKN1A
-eFtFtiu8469Q2omWNY1U6/SH4qda+FBvMPUv7ZZZMEBdq7dXoa8jq1WOFYO2d4DD
-06SCv8r385hWGJ+yo3JFMO8+8RZejSgTXDBLLF4rYy9o/vJ1WTap45S/3TOBURWy
-L3o8jBmSLEZC9kOcEqcNpbtgUk+ojSMJgw+dAF7DbSpNs69Es4BxllKUP9Bf4ufB
-FW9JL9oXd4GAO9l61a7D9m5z1WDhtzdjCcXOdZovHzVpsZ0EBOJ3UKXn2Txh+Es=
-=mB79
+iQEcBAEBAgAGBQJYtX9kAAoJEHCTjHgGee6YMm8H/2WcuGm2Ea8wBOQclUm4oi/2
+eTYJ3rzpps6ZmbVcpVHJgXhECrKnGMn66V9Zbr9GuxsF6/+j3krg/NmqZrDKrUFd
+GEsiuUp31PRfp+kPIpdiN02LENz4NXI7UVUW+3t5nGiRQ9J0sDw2yoopOZpH9AkK
+haC8y0TQRh4zVB0HYtTni9OWQXxT+/nNqQBZps5H8DlqjWvriUgHtdhV+6A69O/5
+i1w18+3npnW4bZgFGGuBrI0iE65QTqW2w9SEbAziaC7HrXzDCa/f2ikUIC07kziN
+w++U52A+EHZXLX2/RrWht3fP2lB9vUKySRAsLhx8iRp5GbX4zRqUB0WGqN3eNJA=
+=941Y
 -----END PGP SIGNATURE-----
