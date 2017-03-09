@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="lt">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="lt" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -9,7 +7,7 @@
         <location filename="../mainwindow.cpp" line="337"/>
         <location filename="../mainwindow.cpp" line="344"/>
         <source>MX Test Repo Installer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="55"/>
@@ -79,42 +77,12 @@
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Displayed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="273"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in testing repository.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="325"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter packages according to their status.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="328"/>
-        <location filename="../mainwindow.ui" line="332"/>
-        <location filename="../mainwindow.cpp" line="354"/>
-        <source>All packages</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="337"/>
-        <location filename="../mainwindow.cpp" line="366"/>
-        <source>Installed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="342"/>
-        <location filename="../mainwindow.cpp" line="364"/>
-        <source>Upgradable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="347"/>
-        <location filename="../mainwindow.cpp" line="368"/>
-        <source>Not installed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
@@ -125,6 +93,36 @@
         <location filename="../mainwindow.ui" line="299"/>
         <source>search</source>
         <translation>ieškoti</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="325"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter packages according to their status.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="328"/>
+        <location filename="../mainwindow.ui" line="332"/>
+        <location filename="../mainwindow.cpp" line="354"/>
+        <source>All packages</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="337"/>
+        <location filename="../mainwindow.cpp" line="366"/>
+        <source>Installed</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="342"/>
+        <location filename="../mainwindow.cpp" line="364"/>
+        <source>Upgradable</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="347"/>
+        <location filename="../mainwindow.cpp" line="368"/>
+        <source>Not installed</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="173"/>
@@ -165,7 +163,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="329"/>
         <source>About MX Test Repo Installer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="330"/>
@@ -175,7 +173,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="331"/>
         <source>App for installing directly from MX Test Repo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="333"/>

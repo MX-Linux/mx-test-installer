@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -9,7 +7,7 @@
         <location filename="../mainwindow.cpp" line="337"/>
         <location filename="../mainwindow.cpp" line="344"/>
         <source>MX Test Repo Installer</source>
-        <translation>MX Instalador del repositorio de pruebas</translation>
+        <translation>MX Instalar desde el Test Repo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="55"/>
@@ -79,42 +77,12 @@
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Displayed</source>
-        <translation type="unfinished"></translation>
+        <translation>Desplegado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="273"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in testing repository.</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Paquete actualizable. La nueva versión se encuentra en el repositorio de pruebas.</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="325"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter packages according to their status.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="328"/>
-        <location filename="../mainwindow.ui" line="332"/>
-        <location filename="../mainwindow.cpp" line="354"/>
-        <source>All packages</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="337"/>
-        <location filename="../mainwindow.cpp" line="366"/>
-        <source>Installed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="342"/>
-        <location filename="../mainwindow.cpp" line="364"/>
-        <source>Upgradable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="347"/>
-        <location filename="../mainwindow.cpp" line="368"/>
-        <source>Not installed</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
@@ -125,6 +93,36 @@
         <location filename="../mainwindow.ui" line="299"/>
         <source>search</source>
         <translation>busca</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="325"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter packages according to their status.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filtrar paquetes según su estado.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="328"/>
+        <location filename="../mainwindow.ui" line="332"/>
+        <location filename="../mainwindow.cpp" line="354"/>
+        <source>All packages</source>
+        <translation>Todos los paquetes</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="337"/>
+        <location filename="../mainwindow.cpp" line="366"/>
+        <source>Installed</source>
+        <translation>Instalado</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="342"/>
+        <location filename="../mainwindow.cpp" line="364"/>
+        <source>Upgradable</source>
+        <translation>Actualizable</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="347"/>
+        <location filename="../mainwindow.cpp" line="368"/>
+        <source>Not installed</source>
+        <translation>No instalado</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="173"/>
