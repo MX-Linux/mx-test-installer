@@ -1,3 +1,9 @@
+mx-test-repo-installer (17.3mx16) mx; urgency=medium
+
+  * new translations 
+
+ -- Adrian <adrian@mxlinux.org>  Thu, 09 Mar 2017 08:38:44 -0500
+
 mx-test-repo-installer (17.2mx16) mx; urgency=medium
 
   * added filter

@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="tr" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="tr">
 <context>
     <name>MainWindow</name>
     <message>
@@ -7,7 +9,7 @@
         <location filename="../mainwindow.cpp" line="337"/>
         <location filename="../mainwindow.cpp" line="344"/>
         <source>MX Test Repo Installer</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="55"/>
@@ -82,12 +84,12 @@
     <message>
         <location filename="../mainwindow.ui" line="273"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Upgradable package. Newer version available in testing repository.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="286"/>
         <source>Greyed out items have already been installed.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="299"/>
@@ -97,7 +99,7 @@
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Filter packages according to their status.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="328"/>
@@ -138,7 +140,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="178"/>
         <source>Not available in stable repo</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="185"/>
@@ -163,7 +165,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="329"/>
         <source>About MX Test Repo Installer</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="330"/>
@@ -173,7 +175,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="331"/>
         <source>App for installing directly from MX Test Repo</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="333"/>
@@ -197,12 +199,12 @@
     <message>
         <location filename="../main.cpp" line="57"/>
         <source>Unable to get exclusive lock</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>Another package management application (like Synaptic or apt-get), is already running. Please close that application first</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../main.cpp" line="75"/>
